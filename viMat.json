@@ -2,42 +2,71 @@
     "title": "viMat",
     "rules": [
         {
-"description": "touch arrows",
+            "description": "capslockVIM",
             "manipulators": [
                 {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "fn",
-                        "modifiers": {
-                            "mandatory": [
-                                "left_command"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "x",
-                            "modifiers": [
-                                "right_option",
-                                "right_control",
-                                "right_command",
-                                "right_shift"
-                            ]
-                        }
-                    ],
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
+                            "name": "d_modifier",
                             "value": 1
                         }
-                    ]
+                    ],
+                    "from": {
+                        "key_code": "d",
+						"modifiers":{
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "c",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+                        {
+                            "key_code": "right_arrow"
+                        },
+                        {
+                            "key_code": "return_or_enter"
+                        },
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+                        {
+                            "set_variable": {
+                                "name": "d_modifier",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "to_after_key_up": [
+                        {
+                            "set_variable": {
+                                "name": "d_modifier",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "type": "basic"
                 },
                 {
-                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "d_modifier",
+                            "value": 0
+                        }
+                    ],
                     "from": {
-                        "key_code": "left_command",
-                        "modifiers": {
+                        "key_code": "d",
+						"modifiers":{
                             "mandatory": [
                                 "fn"
                             ]
@@ -45,347 +74,288 @@
                     },
                     "to": [
                         {
-                            "key_code": "x",
-                            "modifiers": [
-                                "right_option",
-                                "right_control",
-                                "right_command",
-                                "right_shift"
-                            ]
+                            "set_variable": {
+                                "name": "d_modifier",
+                                "value": 1
+                            }
                         }
                     ],
-                    "conditions": [
+                    "to_if_alone": [
                         {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 1
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "left_option",
-                        "modifiers": {
-                            "optional": [
-                                "any"
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command"
                             ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "pointing_button": "button1"
                         },
-                        {
-                            "key_code": "v",
+{
+                            "key_code": "right_arrow",
                             "modifiers": [
-                                "right_option",
-                                "right_control",
-                                "right_command",
-                                "right_shift"
+                                "shift",
+                                "command"
                             ]
                         }
                     ],
+                    "to_delayed_action": {
+                        "to_if_invoked": [
+                            {
+                                "set_variable": {
+                                    "name": "d_modifier",
+                                    "value": 0
+                                }
+                            }
+                        ]
+                    },
+                    "type": "basic"
+                },
+
+
+                {
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers":{
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
+                            "name": "d_modifier",
                             "value": 1
                         }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "f13"
-                    },
-                    "to": [
-                        {
-                            "key_code": "c",
-                            "modifiers": [
-                                "right_option",
-                                "right_control",
-                                "right_command",
-                                "right_shift"
-                            ]
-                        }
                     ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 1
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "z"
-                    },
-                    "to": [
-                        {
-                            "key_code": "z",
-                            "modifiers": [
-                                "right_command"
-                            ]
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 2
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "e",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "up_arrow"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 2
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "d",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "down_arrow"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 2
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "s",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_arrow"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 2
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "f",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_arrow"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 2
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "r",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "delete_forward"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 2
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "w",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "delete_or_backspace"
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 2
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "e",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "up_arrow",
-                            "modifiers": [
-                                "shift"
-                            ]
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 3
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "d",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
-                    "to": [
-                        {
-                            "key_code": "down_arrow",
-                            "modifiers": [
-                                "shift"
-                            ]
-                        }
-                    ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 3
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "key_code": "s",
-                        "modifiers": {
-                            "optional": [
-                                "any"
-                            ]
-                        }
-                    },
                     "to": [
                         {
                             "key_code": "left_arrow",
                             "modifiers": [
-                                "shift"
+                                "shift",
+								"option"
                             ]
+                        },
+						{
+                            "key_code": "delete_or_backspace"
                         }
                     ],
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 3
-                        }
-                    ]
+                    "type": "basic"
                 },
                 {
-                    "type": "basic",
                     "from": {
-                        "key_code": "f",
-                        "modifiers": {
-                            "optional": [
-                                "any"
+                        "key_code": "w",
+                        "modifiers":{
+                            "mandatory": [
+                                "fn"
                             ]
                         }
                     },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "d_modifier",
+                            "value": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "key_code": "left_arrow"
+                        },
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "option"
+                            ]
+                        },
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "shift",
+                                "option"
+                            ]
+                        },
+						{
+                            "key_code": "delete_or_backspace"
+                        },
+                        {
+                            "set_variable": {
+                                "name": "d_modifier",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "s",
+                        "modifiers":{
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "d_modifier",
+                            "value": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "shift",
+                                "command"
+                            ]
+                        },
+						{
+                            "key_code": "forward_delete"
+                        },
+                        {
+                            "set_variable": {
+                                "name": "d_modifier",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "a",
+                        "modifiers":{
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "d_modifier",
+                            "value": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "key_code": "a",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+						{
+                            "key_code": "forward_delete"
+                        },
+                        {
+                            "set_variable": {
+                                "name": "d_modifier",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "period",
+                        "modifiers":{
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "d_modifier",
+                            "value": 1
+                        }
+                    ],
                     "to": [
                         {
                             "key_code": "right_arrow",
                             "modifiers": [
-                                "shift"
+                                "shift",
+								"option"
                             ]
+                        },
+						{
+                            "key_code": "forward_delete"
                         }
                     ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers":{
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
                     "conditions": [
                         {
                             "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 3
+                            "name": "d_modifier",
+                            "value": 1
                         }
-                    ]
-                }
-            ]
-        },
-        {
-"description": "psudo-numpad",
-            "manipulators": [
+                    ],
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "shift",
+								"command"
+                            ]
+                        },
+						{
+                            "key_code": "forward_delete"
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "m",
+                        "modifiers":{
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "d_modifier",
+                            "value": 1
+                        }
+                    ],
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "shift",
+								"command"
+                            ]
+                        },
+						{
+                            "key_code": "delete_or_backspace"
+                        }
+                    ],
+                    "type": "basic"
+                },
+
+
+
+
+
                 {
                     "type": "basic",
                     "from": {
@@ -674,9 +644,17 @@
                             ]
                         }
                     },
-                    "to": [
+                    "to_if_alone": [
                         {
                             "key_code": "keypad_5"
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "k",
+                            "modifiers": [
+                                "left_shift"
+                            ]
                         }
                     ],
                     "type": "basic"
@@ -757,6 +735,25 @@
                     "to": [
                         {
                             "key_code": "comma"
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "spacebar",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "hyphen",
+                            "modifiers": [
+                                "right_shift"
+                            ]
                         }
                     ],
                     "type": "basic"
@@ -872,12 +869,7 @@
                         }
                     ],
                     "type": "basic"
-                }
-            ]
-        },
-        {
-"description": "Tab key Modifier",
-            "manipulators": [
+                },
                 {
                     "from": {
                         "key_code": "tab",
@@ -923,6 +915,7 @@
                             "type": "frontmost_application_unless",
                             "bundle_identifiers": [
                                 "^com\\.microsoft\\.rdc",
+                                "^com\\.p5sys\\.jump\\.mac",
                                 "^com\\.microsoft\\.teams"
                             ]
                         }
@@ -958,6 +951,7 @@
                             "type": "frontmost_application_unless",
                             "bundle_identifiers": [
                                 "^com\\.microsoft\\.rdc",
+                                "^com\\.p5sys\\.jump\\.mac",
                                 "^com\\.microsoft\\.teams"
                             ]
                         }
@@ -1002,6 +996,7 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^com\\.microsoft\\.rdc",
+                                "^com\\.p5sys\\.jump\\.mac",
                                 "^com\\.microsoft\\.teams"
                             ]
                         }
@@ -1590,12 +1585,7 @@
                         }
                     ],
                     "type": "basic"
-                }
-            ]
-        },
-        {
-"description": "Swap left command and control in virtual machine/remote desktop",
-            "manipulators": [
+                },
                 {
                     "type": "basic",
                     "from": {
@@ -1705,7 +1695,7 @@
                     ],
                     "to_if_alone": [
                         {
-                            "key_code": "F10",
+                            "key_code": "f10",
                             "modifiers": [
                                 "control",
                                 "option",
@@ -1743,12 +1733,7 @@
                             ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-"description": "CapsLockVim",
-            "manipulators": [
+                },
                 {
                     "type": "basic",
                     "from": {
@@ -1815,7 +1800,7 @@
                     ],
                     "to_if_alone": [
                         {
-                            "key_code": "f13"
+                            "key_code": "fn"
                         }
                     ]
                 },
@@ -2730,7 +2715,8 @@
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
                                 "^notion\\.id$",
-                                "^net\\.java\\.openjdk\\.cmd$"
+                                "^net\\.java\\.openjdk\\.cmd$",
+                                "^com\\.parallels\\.desktop\\.console$"
                             ]
                         }
                     ],
@@ -2875,7 +2861,10 @@
                         {
                             "key_code": "v",
                             "modifiers": [
-                                "left_command"
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
                             ]
                         }
                     ]
@@ -2892,9 +2881,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "q",
+                            "key_code": "esc",
                             "modifiers": [
-                                "left_command",
                                 "left_shift",
                                 "left_alt"
                             ]
@@ -2932,7 +2920,10 @@
                         {
                             "key_code": "c",
                             "modifiers": [
-                                "command"
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
                             ]
                         }
                     ],
@@ -2946,7 +2937,10 @@
                         {
                             "key_code": "x",
                             "modifiers": [
-                                "command"
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
                             ]
                         }
                     ]
@@ -2987,7 +2981,12 @@
                         },
                         {
                             "key_code": "c",
-                            "modifiers": "command"
+                            "modifiers": [
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
+                            ]
                         }
                     ],
                     "to_if_held_down": [
@@ -3012,7 +3011,12 @@
                         },
                         {
                             "key_code": "x",
-                            "modifiers": "command"
+                            "modifiers": [
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
+                            ]
                         }
                     ],
                     "to_delayed_action": {
@@ -3028,6 +3032,149 @@
                             {
                                 "set_variable": {
                                     "name": "fn-y",
+                                    "value": 0
+                                }
+                            }
+                        ]
+                    }
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "fn-v",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "v",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "basic.to_if_alone_timeout_milliseconds": 250,
+                        "basic.to_if_held_down_threshold_milliseconds": 250
+                    },
+                    "to_if_alone": [
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
+                            ]
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "a",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "v",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
+                    "parameters": {
+                        "basic.to_if_alone_timeout_milliseconds": 250,
+                        "basic.to_if_held_down_threshold_milliseconds": 250
+                    },
+                    "to_if_alone": [
+                        {
+                            "set_variable": {
+                                "name": "fn-v",
+                                "value": 1
+                            }
+                        },
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        },
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_shift",
+                                "left_command"
+                            ]
+                        },
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
+                            ]
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "set_variable": {
+                                "name": "fn-v",
+                                "value": 1
+                            }
+                        },
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        },
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_shift",
+                                "left_command"
+                            ]
+                        },
+                        {
+                            "key_code": "v",
+                            "modifiers": [
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
+                            ]
+                        }
+                    ],
+                    "to_delayed_action": {
+                        "to_if_invoked": [
+                            {
+                                "set_variable": {
+                                    "name": "fn-v",
+                                    "value": 0
+                                }
+                            }
+                        ],
+                        "to_if_canceled": [
+                            {
+                                "set_variable": {
+                                    "name": "fn-v",
                                     "value": 0
                                 }
                             }
@@ -3078,7 +3225,10 @@
                         {
                             "key_code": "c",
                             "modifiers": [
-                                "command"
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
                             ]
                         }
                     ],
@@ -3103,9 +3253,12 @@
                             ]
                         },
                         {
-                            "key_code": "x",
+                            "key_code": "c",
                             "modifiers": [
-                                "command"
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
                             ]
                         }
                     ]
@@ -3127,13 +3280,23 @@
                     "to_if_alone": [
                         {
                             "key_code": "c",
-                            "modifiers": "command"
+                            "modifiers": [
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
+                            ]
                         }
                     ],
                     "to_if_held_down": [
                         {
                             "key_code": "x",
-                            "modifiers": "command"
+                            "modifiers": [
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
+                            ]
                         }
                     ],
                     "to_delayed_action": {
@@ -3169,7 +3332,8 @@
                         {
                             "type": "frontmost_application_unless",
                             "bundle_identifiers": [
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.parallels\\.desktop\\.console$"
                             ]
                         }
                     ],
@@ -3196,7 +3360,8 @@
                         {
                             "type": "frontmost_application_unless",
                             "bundle_identifiers": [
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.parallels\\.desktop\\.console$"
                             ]
                         }
                     ],
@@ -3224,7 +3389,8 @@
                         {
                             "type": "frontmost_application_unless",
                             "bundle_identifiers": [
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.parallels\\.desktop\\.console$"
                             ]
                         }
                     ],
@@ -3253,7 +3419,8 @@
                         {
                             "type": "frontmost_application_unless",
                             "bundle_identifiers": [
-                                "^notion\\.id$"
+                                "^notion\\.id$",
+                                "^com\\.parallels\\.desktop\\.console$"
                             ]
                         }
                     ],
@@ -3281,16 +3448,13 @@
                         {
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
-                                "^notion\\.id$"
+                                "^com\\.parallels\\.desktop\\.console$"
                             ]
                         }
                     ],
                     "to": [
                         {
-                            "key_code": "left_arrow",
-                            "modifiers": [
-                                "command"
-                            ]
+                            "key_code": "home"
                         }
                     ]
                 },
@@ -3308,15 +3472,68 @@
                         {
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
-                                "^notion\\.id$"
+                                "^com\\.parallels\\.desktop\\.console$"
                             ]
                         }
                     ],
                     "to": [
                         {
-                            "key_code": "right_arrow",
+                            "key_code": "end"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn",
+                                "left_command"
+                            ]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "to": [
+                        {
+                            "key_code": "home",
                             "modifiers": [
-                                "command"
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn",
+                                "left_command"
+                            ]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "to": [
+                        {
+                            "key_code": "end",
+                            "modifiers": [
+                                "shift"
                             ]
                         }
                     ]
@@ -3600,210 +3817,7 @@
                         }
                     ]
                 },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "d"
-                            },
-                            {
-                                "key_code": "w"
-                            }
-                        ],
-                        "modifiers": {
-                            "mandatory": [
-                                "fn"
-                            ]
-                        }
-                    },
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_arrow",
-                            "modifiers": [
-                                "left_option"
-                            ]
-                        },
-                        {
-                            "key_code": "left_arrow",
-                            "modifiers": [
-                                "left_option",
-                                "left_shift"
-                            ]
-                        },
-                        {
-                            "key_code": "delete_or_backspace"
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "d"
-                            },
-                            {
-                                "key_code": "comma"
-                            }
-                        ],
-                        "modifiers": {
-                            "mandatory": [
-                                "fn"
-                            ]
-                        }
-                    },
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_arrow",
-                            "modifiers": [
-                                "option",
-                                "shift"
-                            ]
-                        },
-                        {
-                            "key_code": "delete_or_backspace"
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "d"
-                            },
-                            {
-                                "key_code": "period"
-                            }
-                        ],
-                        "modifiers": {
-                            "mandatory": [
-                                "fn"
-                            ]
-                        }
-                    },
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_arrow",
-                            "modifiers": [
-                                "option",
-                                "shift"
-                            ]
-                        },
-                        {
-                            "key_code": "delete_forward"
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "d"
-                            },
-                            {
-                                "key_code": "slash"
-                            }
-                        ],
-                        "modifiers": {
-                            "mandatory": [
-                                "fn"
-                            ]
-                        }
-                    },
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    },
-                    "to": [
-                        {
-                            "key_code": "right_arrow",
-                            "modifiers": [
-                                "left_command",
-                                "shift"
-                            ]
-                        },
-                        {
-                            "key_code": "delete_forward"
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "d"
-                            },
-                            {
-                                "key_code": "m"
-                            }
-                        ],
-                        "modifiers": {
-                            "mandatory": [
-                                "fn"
-                            ]
-                        }
-                    },
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 500
-                    },
-                    "to": [
-                        {
-                            "key_code": "left_arrow",
-                            "modifiers": [
-                                "left_command",
-                                "shift"
-                            ]
-                        },
-                        {
-                            "key_code": "delete_or_backspace"
-                        }
-                    ]
-                },
-                {
-                    "type": "basic",
-                    "from": {
-                        "simultaneous": [
-                            {
-                                "key_code": "d"
-                            },
-                            {
-                                "key_code": "s"
-                            }
-                        ],
-                        "modifiers": {
-                            "mandatory": [
-                                "fn"
-                            ]
-                        },
-                        "simultaneous_options": {
-                            "detect_key_down_uninterruptedly": false,
-                            "key_down_order": "insensitive"
-                        }
-                    },
-                    "parameters": {
-                        "basic.simultaneous_threshold_milliseconds": 200
-                    },
-                    "to": [
-                        {
-                            "key_code": "delete_or_backspace",
-                            "modifiers": [
-                                "left_alt"
-                            ]
-                        }
-                    ]
-                },
+
                 {
                     "type": "basic",
                     "from": {
@@ -3838,7 +3852,10 @@
                         {
                             "key_code": "c",
                             "modifiers": [
-                                "left_command"
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
                             ]
                         }
                     ]
@@ -3877,7 +3894,10 @@
                         {
                             "key_code": "x",
                             "modifiers": [
-                                "left_command"
+                                "command",
+                                "control",
+                                "shift",
+                                "option"
                             ]
                         }
                     ]
