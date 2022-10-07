@@ -1109,7 +1109,7 @@
 
 
 
-        
+
         {
             "description": "capslockVIM",
             "manipulators": [
@@ -1675,7 +1675,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "f16"
+                            "key_code": "comma"
                         }
                     ],
                     "type": "basic"
@@ -1931,7 +1931,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "slash"
+                            "key_code": "hyphen"
                         }
                     ],
                     "type": "basic"
@@ -1963,7 +1963,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "comma"
+                            "key_code": "period"
                         }
                     ],
                     "type": "basic"
