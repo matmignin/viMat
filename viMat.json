@@ -2,6 +2,1115 @@
     "title": "viMat",
     "rules": [
         {
+            "description": "multitouchVIM",
+            "manipulators": [
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 2
+                        }
+                    ],
+                    "from": {
+                        "key_code": "k"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "vertical_wheel": -50
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 2
+                        }
+                    ],
+                    "from": {
+                        "key_code": "h"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "horizontal_wheel": -50
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 2
+                        }
+                    ],
+                    "from": {
+                        "key_code": "l"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "horizontal_wheel": 50
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 2
+                        }
+                    ],
+                    "from": {
+                        "key_code": "j"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "vertical_wheel": 50
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 2
+                        }
+                    ],
+                    "from": {
+                        "key_code": "n"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "vertical_wheel": 200
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 2
+                        }
+                    ],
+                    "from": {
+                        "key_code": "u"
+                    },
+                    "to": [
+                        {
+                            "mouse_key": {
+                                "vertical_wheel": -200
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "semicolon",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "slash",
+                            "modifiers": [
+                                "left_command",
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "semicolon"
+                    },
+                    "to": [
+                        {
+                            "key_code": "slash",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "semicolon"
+                    },
+                    "to": [
+                        {
+                            "key_code": "slash",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "quote"
+                    },
+                    "to": [
+                        {
+                            "key_code": "7",
+                            "modifiers": [
+                                "left_command",
+                                "left_option"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "i"
+                    },
+                    "to": [
+                        {
+                            "key_code": "i",
+                            "modifiers": [
+                                "left_command",
+                                "left_alt",
+                                "left_control"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "k"
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "k",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "l",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "g"
+                    },
+                    "to": [
+                        {
+                            "key_code": "end",
+                            "modifiers": [
+                                "left_control"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "h"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "h",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "j"
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "j",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "down_arrow",
+                            "modifiers": [
+                                "left_shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "right_shift"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_shift"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "tab"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "right_command"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_command"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        },
+                        {
+                            "key_code": "f14"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "l"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "delete_or_backspace"
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace",
+                            "modifiers": [
+                                "right_command"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^net\\.java\\.openjdk\\.cmd$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "o"
+                    },
+                    "to": [
+                        {
+                            "key_code": "end"
+                        },
+                        {
+                            "key_code": "return_or_enter"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^notion\\.id$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "o",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "up_arrow"
+                        },
+                        {
+                            "key_code": "end"
+                        },
+                        {
+                            "key_code": "return_or_enter"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^net\\.java\\.openjdk\\.cmd$",
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "o"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+                        {
+                            "key_code": "return_or_enter"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^net\\.java\\.openjdk\\.cmd$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "o",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+                        {
+                            "key_code": "up_arrow"
+                        },
+                        {
+                            "key_code": "return_or_enter"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "comma"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_option"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "period"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_option"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "left_option",
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "period",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "left_option",
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "m"
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "slash"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "command"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command",
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "command",
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "m"
+                    },
+                    "to": [
+                        {
+                            "key_code": "home"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "slash"
+                    },
+                    "to": [
+                        {
+                            "key_code": "end"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "home",
+                            "modifiers": [
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.parallels\\.desktop\\.console$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "end",
+                            "modifiers": [
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^net\\.java\\.openjdk\\.cmd$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "m",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command",
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^notion\\.id$",
+                                "^net\\.java\\.openjdk\\.cmd$"
+                            ]
+                        }
+                    ],
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "command",
+                                "shift"
+                            ]
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "u",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn"
+                            ],
+                            "optional": [
+                                "left_command",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_up"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "n",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn"
+                            ],
+                            "optional": [
+                                "left_command",
+                                "left_shift"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "page_down"
+                        }
+                    ]
+                }
+            ]
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+        
+        {
             "description": "capslockVIM",
             "manipulators": [
                 {
@@ -87,7 +1196,7 @@
                                 "command"
                             ]
                         },
-{
+                        {
                             "key_code": "right_arrow",
                             "modifiers": [
                                 "shift",
@@ -189,7 +1298,7 @@
                         "key_code": "s",
                         "modifiers":{
                             "mandatory": [
-                                "fn"
+                                "any"
                             ]
                         }
                     },
@@ -422,7 +1531,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "tab"
+                            "key_code": "delete_or_backspace"
                         }
                     ],
                     "type": "basic"
@@ -550,7 +1659,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "period"
+                            "key_code": "tab"
                         }
                     ],
                     "type": "basic"
@@ -566,7 +1675,23 @@
                     },
                     "to": [
                         {
-                            "key_code": "period"
+                            "key_code": "f16"
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "right_control",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "f15"
                         }
                     ],
                     "type": "basic"
@@ -592,7 +1717,7 @@
                         "key_code": "delete_or_backspace",
                         "modifiers": {
                             "mandatory": [
-                                "right_control"
+                                "right_shift"
                             ]
                         }
                     },
@@ -655,6 +1780,27 @@
                             "modifiers": [
                                 "left_shift"
                             ]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "fn",
+                        "modifiers": {
+                            "optional": [
+                                "any"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "fn"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "key_code": "f13"
                         }
                     ],
                     "type": "basic"
@@ -734,7 +1880,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "comma"
+                            "key_code": "period"
                         }
                     ],
                     "type": "basic"
@@ -1758,6 +2904,13 @@
                 },
                 {
                     "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 0
+                        }
+                    ],
                     "from": {
                         "key_code": "right_command",
                         "modifiers": {
@@ -1920,13 +3073,13 @@
                         "key_code": "delete_or_backspace",
                         "modifiers": {
                             "mandatory": [
-                                "right_shift"
+                                "right_control"
                             ]
                         }
                     },
                     "to": [
                         {
-                            "key_code": "delete_forward",
+                            "key_code": "delete_or_backspace",
                             "modifiers": [
                                 "command"
                             ]
