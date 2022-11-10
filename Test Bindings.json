@@ -7,6 +7,50 @@
 
 
 
+
+                "to_if_held_down": [
+                    {
+                        "key_code": "left_arrow",
+                        "modifiers": [
+                            "command"
+                        ]
+                    },
+                    {
+                        "key_code": "right_arrow",
+                        "modifiers": [
+                            "shift",
+                            "command"
+                        ]
+                    },
+                    {
+                        "key_code": "c",
+                        "modifiers": [
+                            "command"
+                        ]
+                    },
+                    {
+                        "key_code": "right_arrow"
+                    },
+                    {
+                        "key_code": "return_or_enter"
+                    },
+                    {
+                        "key_code": "v",
+                        "modifiers": [
+                            "command"
+                        ]
+                    },
+                    {
+                        "set_variable": {
+                            "name": "d_modifier",
+                            "value": 1
+                        }
+                    }
+                ],
+
+
+
+                
             ]
         }
     ]
