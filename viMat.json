@@ -81,22 +81,8 @@
                     },
                     "to": [
                         {
-                            "set_notification_message": {
-                                "id": "org.pqrs.notificaion_message_example",
-                                "text": "scroll jright"
-                            }
-                        },
-                        {
                             "mouse_key": {
                                 "horizontal_wheel": 50
-                            }
-                        }
-                    ],
-                    "to_after_key_up": [
-                        {
-                            "set_notification_message": {
-                                "id": "org.pqrs.notificaion_message_example",
-                                "text": ""
                             }
                         }
                     ]
@@ -159,22 +145,8 @@
                     },
                         "to": [
                             {
-                                "set_notification_message": {
-                                    "id": "org.pqrs.notificaion_message_example",
-                                    "text": "scroll left"
-                                }
-                            },
-                            {
                                 "mouse_key": {
                                     "horizontal_wheel": 50
-                                }
-                            }
-                        ],
-                        "to_after_key_up": [
-                            {
-                                "set_notification_message": {
-                                    "id": "org.pqrs.notificaion_message_example",
-                                    "text": ""
                                 }
                             }
                         ]
@@ -298,6 +270,32 @@
                                 "left_command"
                             ]
                         }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "multitouch_extension_finger_count_total",
+                            "value": 1
+                        }
+                    ],
+                    "from": {
+                        "key_code": "right_command"
+                    },
+                    "to": [
+                        {
+                            "key_code": "right_command"
+                        }
+                    ],
+                    "to_if_alone": [
+                        {
+                            "pointing_button": "button1",
+                            "modifiers": [
+                                "left_command"
+                            ]
+                        },{"key_code": "f14","modifiers":["shift"]}
                     ]
                 },
                 {
@@ -785,6 +783,12 @@
                             "type": "variable_if",
                             "name": "s_modifier",
                             "value": 0
+                        },
+                        {
+                            "type": "frontmost_application_unless",
+                            "bundle_identifiers": [
+                                "^com\\.microsoft\\.VSCode$"
+                            ]
                         }
                     ],
                     "to": [
@@ -796,15 +800,188 @@
                         },
                         {
                             "set_variable": {
-                                "name": "s_modifier",
+                                "name": "s_modfier",
                                 "value": 0
                             }
                         }
                     ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+                        {
+                            "key_code": "left_arrow",
+                            "modifiers": [
+                                "command"
+                            ]
+                        },
+                        {
+                            "key_code": "right_arrow",
+                            "modifiers": [
+                                "shift",
+                                "command"
+                            ]
+                        },
+                        {
+                            "key_code": "delete_or_backspace"
+                        },{"key_code": "f14","modifiers":["option"]}
+
+                    ],
+                    "parameters": {
+                        "basic.to_if_held_down_threshold_milliseconds": 450
+                    },
                     "to_after_key_up": [
                         {
                             "key_code": "delete_or_backspace"
+                        },{"key_code": "f14","modifiers":["shift"]},
+                        {
+                            "set_variable": {
+                                "name": "d_modifier",
+                                "value": 0
+                            }
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "d",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn",
+                                "left_command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace",
+                            "modifiers": [
+                                "command",
+                                "shift"
+                            ]
+                        },{"key_code": "f14","modifiers":["option"]}
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "d",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn",
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace",
+                            "modifiers": [
+                                "option"
+                            ]
+                        },{"key_code": "f14","modifiers":["option"]}
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "x",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn",
+                                "left_command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_forward",
+                            "modifiers": [
+                                "left_command"
+                                ,"shift"
+                            ]
+                        },{"key_code": "f14","modifiers":["option"]}
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "x",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn",
+                                "option"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_forward",
+                            "modifiers": [
+                                "option"
+                            ]
+                        },{"key_code": "f14","modifiers":["option"]}
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "from": {
+                        "key_code": "d",
+                        "modifiers": {
+                            "mandatory": [
+                                "fn"
+                            ]
+                        }
+                    },
+                    "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "d_modifier",
+                            "value": 0
                         },
+                        {
+                            "type": "variable_if",
+                            "name": "s_modifier",
+                            "value": 0
+                        },
+                        {
+                            "type": "frontmost_application_if",
+                            "bundle_identifiers": [
+                                "^com\\.microsoft\\.VSCode$"
+                            ]
+                        }
+                    ],
+                    "to": [
+                        {
+                            "set_variable": {
+                                "name": "d_modifier",
+                                "value": 1
+                            }
+                        },
+                        {
+                            "set_variable": {
+                                "name": "s_modfier",
+                                "value": 0
+                            }
+                        }
+                    ],
+                    "to_if_held_down": [
+                        {
+                            "key_code": "delete_or_backspace","modifiers":["option"]
+                        },{"key_code": "f14","modifiers":["option"]}
+
+                    ],
+                    "parameters": {
+                        "basic.to_if_held_down_threshold_milliseconds": 450
+                    },
+                    "to_after_key_up": [
+                        {
+                            "key_code": "delete_or_backspace"
+                        },{"key_code": "f14","modifiers":["shift"]},
                         {
                             "set_variable": {
                                 "name": "d_modifier",
@@ -979,33 +1156,6 @@
                 },
                 {
                     "from": {
-                        "key_code": "f",
-                        "modifiers": {
-                            "optional": [
-                                "fn"
-                            ]
-                        }
-                    },
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "d_modifier",
-                            "value": 1
-                        }
-                    ],
-                    "to": [
-                        {
-                            "key_code": "right_arrow",
-                            "modifiers": [
-                                "shift",
-                                "command"
-                            ]
-                        }
-                    ],
-                    "type": "basic"
-                },
-                {
-                    "from": {
                         "key_code": "s",
                         "modifiers": {
                             "mandatory": [
@@ -1035,28 +1185,16 @@
                         {
                             "key_code": "left_arrow",
                             "modifiers": [
-                                "command"
-                            ]
-                        },
-                        {
-                            "key_code": "left_arrow",
-                            "modifiers": [
-                                "command"
-                            ]
-                        },
-                        {
-                            "key_code": "right_arrow",
-                            "modifiers": [
                                 "shift",
-                                "command"
+                                "option"
                             ]
-                        }
+                        },{"key_code": "f14","modifiers":["shift"]}
                     ],
                     "type": "basic"
                 },
                 {
                     "from": {
-                        "key_code": "r",
+                        "key_code": "f",
                         "modifiers": {
                             "mandatory": [
                                 "fn"
@@ -1077,7 +1215,7 @@
                                 "shift",
                                 "option"
                             ]
-                        }
+                        },{"key_code": "f14","modifiers":["shift"]}
                     ],
                     "type": "basic"
                 },
@@ -1250,7 +1388,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "v",
+                            "key_code": "x",
                             "modifiers":["left_command"]
                         },{"key_code": "f14","modifiers":["option"]}
                     ],
@@ -1259,6 +1397,42 @@
                 {
                     "from": {
                         "key_code": "comma",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "f14","modifiers":["option"]},
+                        {
+                            "key_code": "z",
+                            "modifiers":["left_command"]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "slash",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {"key_code": "f14","modifiers":["option"]},
+                        {
+                            "key_code": "z",
+                            "modifiers":["left_command","shift"]
+                        }
+                    ],
+                    "type": "basic"
+                },
+                {
+                    "from": {
+                        "key_code": "period",
                         "modifiers": {
                             "mandatory": [
                                 "right_command"
@@ -1474,39 +1648,14 @@
                         }
                     },
                     "to": [
-                        {
-                            "set_notification_message": {
-                                "id": "org.pqrs.notificaion_message_example",
-                                "text": "CUT"
-                            }
-                        },
-
                             {
                                 "key_code": "x",
                                 "modifiers": [
                                     "left_command"
                                 ]
-                            },{"key_code": "f14","modifiers":["option"]}
+                            },{"key_code": "f14","modifiers":["control"]}
 
                         ],
-                        "to_delayed_action": {
-                            "to_if_invoked": [
-                                {
-                                    "set_notification_message": {
-                                        "id": "org.pqrs.notificaion_message_example",
-                                        "text": ""
-                                    }
-                                }
-                            ],
-                            "to_if_canceled": [
-                                {
-                                    "set_notification_message": {
-                                        "id": "org.pqrs.notificaion_message_example",
-                                        "text": ""
-                                    }
-                                }
-                            ]
-                        },
                         "parameters": {
                             "basic.to_delayed_action_delay_milliseconds": 1000
                         }
@@ -1698,7 +1847,9 @@
                     },
                     "to": [
                         {
-                            "key_code": "period"
+                            "key_code": "v",
+                            "modifiers":
+                                ["command"]
                         },{"key_code": "f14","modifiers":["shift"]}
                     ],
                     "type": "basic"
@@ -1765,7 +1916,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "hyphen"
+                            "key_code": "comma"
                         },{"key_code": "f14","modifiers":["shift"]}
                     ],
                     "type": "basic"
@@ -1797,7 +1948,7 @@
                     },
                     "to": [
                         {
-                            "key_code": "comma"
+                            "key_code": "period"
                         },{"key_code": "f14","modifiers":["shift"]}
                     ],
                     "type": "basic"
@@ -2913,14 +3064,11 @@
                             {
                                 "type": "frontmost_application_unless",
                                 "bundle_identifiers": [
-                                    "^notion\\.id$"
+                                    "^notion\\.id$",
+                                    "^com\\.microsoft\\.Excel$"
+
                                 ]
-                            },
-                        {
-                            "type": "variable_if",
-                            "name": "multitouch_extension_finger_count_total",
-                            "value": 0
-                        }
+                            }
                     ],
                     "from": {
                         "key_code": "right_arrow",
@@ -2948,6 +3096,37 @@
                         },
                         {
                             "key_code": "delete_or_backspace"
+                        }
+                    ]
+                },
+                {
+                    "type": "basic",
+                    "conditions": [
+                            {
+                                "type": "frontmost_application_if",
+                                "bundle_identifiers": [
+                                    "^notion\\.id$",
+                                    "^com\\.microsoft\\.Excel$"
+
+                                ]
+                            }
+                    ],
+                    "from": {
+                        "key_code": "right_arrow",
+                        "modifiers": {
+                            "mandatory": [
+                                "right_command"
+                            ]
+                        }
+                    },
+                    "to": [
+                        {
+                            "key_code": "delete_or_backspace",
+                            "modifiers": [
+                                "shift",
+                                "control",
+                                "option"
+                                    ]
                         }
                     ]
                 },
@@ -3305,13 +3484,6 @@
                             ]
                         }
                     },
-                    "conditions": [
-                        {
-                            "type": "variable_if",
-                            "name": "d_modifier",
-                            "value": 0
-                        }
-                    ],
                     "to": [
                         {
                             "key_code": "r",
@@ -3440,6 +3612,11 @@
                         }
                     ],
                     "conditions": [
+                        {
+                            "type": "variable_if",
+                            "name": "d_modifier",
+                            "value": 0
+                        },
                         {
                             "type": "frontmost_application_if",
                             "bundle_identifiers": [
@@ -3810,8 +3987,8 @@
                     },
                     "to": [
                         {
-                            "key_code": "delete_or_backspace"
-                        }
+                            "key_code": "z","modifiers":["command"]
+                        },{"key_code": "f14","modifiers":["shift"]}
                     ]
                 },
                 {
@@ -3825,6 +4002,7 @@
                         }
                     },
                     "to": [
+                        {"key_code": "f14","modifiers":["option"]},
                         {
                             "key_code": "delete_forward"
                         }
