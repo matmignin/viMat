@@ -1,5 +1,7 @@
 karabiner.code-workspace
 .vscode/numbered-bookmarks.json
-viMat.json
-*.DS_Store
+viMatBK.json
+*/assets/.DS_Store
+*/.DS_Store
 viMultitouch.json
+.DS_Store
