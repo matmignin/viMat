@@ -1,0 +1,4488 @@
+{
+  "title": "viMat Capslock",
+  "rules": [ {"description": "capslock Fn ViM",
+      "manipulators": [
+
+
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f14",
+              "modifiers": [
+                "shift"
+              ]
+            },
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "delete_or_backspace",
+            "modifiers": {
+              "mandatory": [
+                "right_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "delete_forward"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "mandatory": [
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "left_control",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "left_control"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "return_or_enter"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_6"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_7"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_8"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "o",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_9"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "period"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "spacebar"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "right_shift"
+              ],
+              "optional": [
+                "left_shift"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen",
+              "modifiers": [
+                "right_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "semicolon",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_0"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "f14",
+              "modifiers": [
+                "shift"
+              ]
+            },
+            {
+              "key_code": "hyphen"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "hyphen",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "period"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "quote",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "keypad_slash"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "equal_sign",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "hyphen"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "slash",
+            "modifiers": {
+              "mandatory": [
+                "right_control"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "slash"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 0
+            },
+            {
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.teams2",
+                "^com\\.microsoft\\.Excel"
+
+              ],
+              "type": "frontmost_application_unless"
+            }
+          ],
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "optional": [
+                "any"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "tab"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 1
+            },
+            {
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.team2$",
+                "^com\\.microsoft\\.Excel$"
+              ],
+              "type": "frontmost_application_unless"
+            }
+          ],
+          "from": {
+            "key_code": "tab",
+            "modifiers": {
+              "optional": [
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+
+        {
+          "conditions": [
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "right_option"
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+        {
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.VSCode$",
+                "^net\\.java\\.openjdk\\.cmd$"
+              ],
+              "type": "frontmost_application_if"
+            },
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "from": {
+            "key_code": "right_option"
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": [
+                "right_alt"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "shift",
+                "command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "open_bracket",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "shift",
+                "option"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "close_bracket",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "shift",
+                "option"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "h",
+              "modifiers": [
+                "shift",
+                "option"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "left_command",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "down_arrow",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "left_command",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "j",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "j",
+              "modifiers": [
+                "left_option",
+                "left_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "k",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": [
+                "left_option",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "n",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "j",
+              "modifiers": [
+                "command",
+                "left_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "u",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "k",
+              "modifiers": [
+                "command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "right_alt"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "i",
+              "modifiers": [
+                "left_command",
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "close_bracket",
+            "modifiers": {
+              "mandatory": [
+                "right_alt"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "right_command",
+                "right_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "close_bracket",
+              "modifiers": [
+                "right_command",
+                "right_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "h",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "open_bracket",
+              "modifiers": [
+                "right_command",
+                "right_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "l",
+            "modifiers": {
+              "mandatory": [
+                "right_alt",
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "l",
+              "modifiers": [
+                "option",
+                "right_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "1",
+            "modifiers": {
+              "mandatory": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "1",
+              "modifiers": [
+                "command",
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "2",
+            "modifiers": {
+              "mandatory": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "2",
+              "modifiers": [
+                "command",
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "3",
+            "modifiers": {
+              "mandatory": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "3",
+              "modifiers": [
+                "command",
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "4",
+            "modifiers": {
+              "mandatory": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "4",
+              "modifiers": [
+                "command",
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "5",
+            "modifiers": {
+              "mandatory": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "5",
+              "modifiers": [
+                "command",
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "6",
+            "modifiers": {
+              "mandatory": [
+                "caps_lock"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "6",
+              "modifiers": [
+                "command",
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": {
+              "mandatory": [
+                "right_alt"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "grave_accent_and_tilde",
+              "modifiers": [
+                "command",
+                "shift",
+                "control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+
+      {
+        "from": {
+          "key_code": "right_option",
+          "modifiers": {
+            "mandatory": [
+              "right_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_option",
+            "lazy": true
+          }
+        ],
+        "to_if_alone": [
+          {
+            "key_code": "delete_or_backspace"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "right_option",
+          "modifiers": {
+            "optional": [
+              "any"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_option",
+            "lazy": true
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "right_shift",
+          "modifiers": {
+            "mandatory": [
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "caps_lock"
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "left_shift",
+          "modifiers": {
+            "mandatory": [
+              "right_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "caps_lock"
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "return_or_enter",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "return_or_enter",
+            "modifiers": [
+              "right_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "return_or_enter"
+        },
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 250,
+          "basic.to_if_held_down_threshold_milliseconds": 550
+        },
+        "to_if_alone": [
+          {
+            "key_code": "return_or_enter"
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "return_or_enter",
+            "modifiers": [
+              "right_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "w",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "parameters": {
+          "basic.to_if_held_down_threshold_milliseconds": 450
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "repeat": false
+          },
+          {
+            "key_code": "right_arrow",
+            "repeat": false,
+            "modifiers": [
+              "option"
+            ]
+          },
+          {
+            "key_code": "left_arrow",
+            "repeat": false,
+            "modifiers": [
+              "option"
+            ]
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "left_arrow",
+            "repeat": false
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "option"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "option"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "shift",
+              "option"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "right_command",
+              "right_option"
+            ],
+            "repeat": false
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "semicolon",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "slash",
+            "modifiers": [
+              "left_command",
+              "shift"
+            ]
+          },
+          {
+            "key_code": "f15"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "semicolon",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "slash",
+            "modifiers": [
+              "left_control"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "grave_accent_and_tilde",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "grave_accent_and_tilde",
+            "modifiers": [
+              "left_command",
+              "left_alt",
+              "left_control"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "r",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "r",
+            "modifiers": [
+              "left_command",
+              "left_alt",
+              "left_control"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "escape",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "escape",
+            "modifiers": [
+              "left_command",
+              "caps_lock",
+              "left_alt",
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "escape",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "q",
+            "modifiers": [
+              "left_command",
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "quote",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "7",
+            "modifiers": [
+              "left_command",
+              "left_option"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "f",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "f",
+            "modifiers": [
+              "left_control",
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "f",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "f",
+            "modifiers": [
+              "left_control",
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "right_alt",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "7",
+            "modifiers": [
+              "left_command",
+              "left_option"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "i",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "i",
+            "modifiers": [
+              "left_command",
+              "left_alt",
+              "left_control"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow",
+            "modifiers": [
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow",
+            "modifiers": [
+              "left_option",
+              "left_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_option",
+              "left_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "1",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "2",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "3",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "3",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "4",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "4",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "5",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "5",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "6",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "6",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "7",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "7",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "8",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "8",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "9",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "9",
+            "modifiers": [
+              "left_control",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "g",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "g",
+            "modifiers": [
+              "left_control",
+              "left_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "down_arrow"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "down_arrow",
+            "modifiers": [
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow",
+            "modifiers": [
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_alt"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "down_arrow",
+            "modifiers": [
+              "left_option",
+              "left_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_alt"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow",
+            "modifiers": [
+              "left_option",
+              "left_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "j",
+            "modifiers": [
+              "left_option",
+              "left_control"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "k",
+            "modifiers": [
+              "left_option",
+              "left_control"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "z",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "delete_or_backspace"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "x",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "delete_forward"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "1",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "1",
+            "modifiers": [
+              "left_command",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "2",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "2",
+            "modifiers": [
+              "left_command",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "3",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "3",
+            "modifiers": [
+              "left_command",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "4",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "4",
+            "modifiers": [
+              "left_command",
+              "right_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "delete_or_backspace",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "delete_or_backspace",
+            "modifiers": [
+              "right_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^notion\\.id$",
+              "^net\\.java\\.openjdk\\.cmd$",
+              "^com\\.parallels\\.desktop\\.console$",
+              "^com\\.apple\\.Notes$",
+              "^com\\.oracle\\.java\\.8u371\\.java$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "o",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "return_or_enter"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^notion\\.id$",
+              "^net\\.java\\.openjdk\\.cmd$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "o",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "end"
+          },
+          {
+            "key_code": "return_or_enter"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^notion\\.id$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "o",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "up_arrow"
+          },
+          {
+            "key_code": "end"
+          },
+          {
+            "key_code": "return_or_enter"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^notion\\.id$",
+              "^net\\.java\\.openjdk\\.cmd$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "o",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "up_arrow"
+          },
+          {
+            "key_code": "return_or_enter"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "d_modifier",
+            "type": "variable_unless",
+            "value": 1
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "comma",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_control"
+            ],
+            "repeat": true
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "d_modifier",
+            "type": "variable_unless",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "comma",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_option"
+            ],
+            "repeat": true
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "period",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_control"
+            ],
+            "repeat": true
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "period",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_control"
+            ],
+            "repeat": true
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "period",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_option"
+            ],
+            "repeat": true
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "comma",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_control",
+              "shift"
+            ],
+            "repeat": true
+          }
+        ],
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "comma",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_option",
+              "shift"
+            ],
+            "repeat": true
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "period",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_control",
+              "shift"
+            ],
+            "repeat": true
+          }
+        ],
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "period",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_option",
+              "shift"
+            ],
+            "repeat": true
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "p",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "v",
+            "modifiers": [
+              "command",
+              "control",
+              "shift",
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "q",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "escape"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "y",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "conditions": [
+          {
+            "name": "fn-y",
+            "type": "variable_if",
+            "value": 1
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "fn-y",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "fn-y",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "to": [
+          {
+            "set_variable": {
+              "name": "fn-y",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "a",
+            "modifiers": [
+              "left_command"
+            ]
+          },
+          {
+            "key_code": "x",
+            "modifiers": [
+              "left_command"
+            ]
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "y",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "conditions": [
+          {
+            "name": "fn-y",
+            "type": "variable_if",
+            "value": 0
+          }
+        ],
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 250,
+          "basic.to_if_held_down_threshold_milliseconds": 250
+        },
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "fn-y",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "fn-y",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "to_if_alone": [
+          {
+            "set_variable": {
+              "name": "fn-y",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "a",
+            "modifiers": [
+              "left_command"
+            ]
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "set_variable": {
+              "name": "fn-y",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "a",
+            "modifiers": [
+              "left_command"
+            ]
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "e",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 250,
+          "basic.to_if_held_down_threshold_milliseconds": 250
+        },
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "fn-y",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "fn-y",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "to_if_alone": [
+          {
+            "set_variable": {
+              "name": "fn-y",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "left_arrow"
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_option"
+            ]
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_shift",
+              "left_option"
+            ]
+          },
+          {
+            "key_code": "x",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "set_variable": {
+              "name": "fn-y",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_command"
+            ]
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_shift",
+              "left_command"
+            ]
+          },
+          {
+            "key_code": "x",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "v",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 250,
+          "basic.to_if_held_down_threshold_milliseconds": 250
+        },
+        "to_if_alone": [
+          {
+            "key_code": "b",
+            "modifiers": [
+              "shift",
+              "option"
+            ]
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "b",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "fn-c",
+            "type": "variable_if",
+            "value": 1
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "c",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 250,
+          "basic.to_if_held_down_threshold_milliseconds": 250
+        },
+        "to_if_alone": [
+          {
+            "set_variable": {
+              "name": "fn-c",
+              "value": 0
+            }
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "control"
+            ]
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_shift",
+              "control"
+            ]
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "set_variable": {
+              "name": "fn-c",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_command"
+            ]
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_shift",
+              "left_command"
+            ]
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "fn-c",
+            "type": "variable_if",
+            "value": 1
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "c",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 250,
+          "basic.to_if_held_down_threshold_milliseconds": 250
+        },
+        "to_if_alone": [
+          {
+            "set_variable": {
+              "name": "fn-c",
+              "value": 0
+            }
+          },
+          {
+            "key_code": "home"
+          },
+          {
+            "key_code": "end",
+            "modifiers": [
+              "left_shift"
+            ]
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "set_variable": {
+              "name": "fn-c",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "home"
+          },
+          {
+            "key_code": "end",
+            "modifiers": [
+              "left_shift"
+            ]
+          },
+          {
+            "key_code": "x",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "c",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "conditions": [
+          {
+            "name": "fn-c",
+            "type": "variable_unless",
+            "value": 1
+          }
+        ],
+        "parameters": {
+          "basic.to_if_alone_timeout_milliseconds": 250,
+          "basic.to_if_held_down_threshold_milliseconds": 250
+        },
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "fn-c",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "fn-c",
+                "value": 1
+              }
+            }
+          ]
+        },
+        "to_if_alone": [
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "x",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "home"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "slash",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "end"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "slash",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "home",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "slash",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "end",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^notion\\.id$",
+              "^com\\.parallels\\.desktop\\.console$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "slash",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          },
+          {
+            "key_code": "f15"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "comma",
+          "modifiers": {
+            "mandatory": [
+              "left_command",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "horizontal_wheel": 200
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "period",
+          "modifiers": {
+            "mandatory": [
+              "left_option",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "horizontal_wheel": -200
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "j",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "vertical_wheel": -40
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "k",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "vertical_wheel": 40
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "vertical_wheel": -80
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "right_option"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "vertical_wheel": 80
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "right_option",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "i",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "right_option",
+              "command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "u",
+            "modifiers": [
+              "command",
+              "option"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "left_command",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "vertical_wheel": -200
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "m",
+          "modifiers": {
+            "mandatory": [
+              "left_command",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "vertical_wheel": 200
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "left_command",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "vertical_wheel": 200
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "left_command"
+            ]
+          }
+        },
+        "to": [
+          {
+            "mouse_key": {
+              "vertical_wheel": 50
+            }
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "page_up"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "page_down"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "u",
+          "modifiers": {
+            "mandatory": [
+              "left_command",
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "page_up",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "n",
+          "modifiers": {
+            "mandatory": [
+              "left_command",
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "page_down",
+            "modifiers": [
+              "command"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "h",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "page_up",
+            "modifiers": [
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "l",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "page_down",
+            "modifiers": [
+              "left_shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "close_bracket",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "f7"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "open_bracket",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "f6"
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^notion\\.id$",
+              "^net\\.java\\.openjdk\\.cmd$",
+              "^com\\.microsoft\\.VSCode$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "left_command"
+            ],
+            "repeat": false
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "control"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_command"
+            ]
+          }
+        },
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$",
+              "^net\\.java\\.openjdk\\.cmd$"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "name": "a_key_pressed",
+            "type": "variable_if",
+            "value": 0
+          }
+        ],
+        "to": [
+          {
+            "set_variable": {
+              "name": "a_key_pressed",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "a",
+            "modifiers": [
+              "shift",
+              "option",
+              "command"
+            ],
+            "repeat": false
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "a_key_pressed",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "a_key_pressed",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock",
+              "left_shift"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "left_shift",
+              "left_command",
+              "left_alt"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "s_modifier",
+            "type": "variable_if",
+            "value": 1
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "s",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "left_alt"
+            ],
+            "repeat": false
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "s_modifier",
+            "type": "variable_if",
+            "value": 1
+          },
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "from": {
+          "key_code": "s",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "home"
+          },
+          {
+            "key_code": "end",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "s_modifier",
+            "type": "variable_if",
+            "value": 1
+          },
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$",
+              "^net\\.java\\.openjdk\\.cmd$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "s",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "shift",
+              "command"
+            ],
+            "repeat": false
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "x",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          },
+          {
+            "name": "s_modifier",
+            "type": "variable_if",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "s",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "set_variable": {
+              "name": "s_modifier",
+              "value": 1
+            }
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "to_if_alone": [
+          {
+            "set_variable": {
+              "name": "s_modifier",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "a",
+            "modifiers": [
+              "left_option",
+              "left_command"
+            ]
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "x",
+            "modifiers": [
+              "left_command"
+            ],
+            "repeat": false
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+              "^com\\.microsoft\\.rdc\\.macos$",
+              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
+            ],
+            "type": "frontmost_application_if"
+          },
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          },
+          {
+            "name": "s_modifier",
+            "type": "variable_if",
+            "value": 0
+          }
+        ],
+        "from": {
+          "key_code": "s",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "set_variable": {
+              "name": "s_modifier",
+              "value": 1
+            }
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "to_if_alone": [
+          {
+            "set_variable": {
+              "name": "s_modifier",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "home"
+          },
+          {
+            "key_code": "end",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          },
+          {
+            "name": "s_modifier",
+            "type": "variable_if",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "s",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          },
+          {
+            "set_variable": {
+              "name": "s_modifier",
+              "value": 0
+            }
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "x",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          },
+          {
+            "name": "s_modifier",
+            "type": "variable_if",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "x",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "x",
+            "modifiers": [
+              "command"
+            ]
+          },
+          {
+            "set_variable": {
+              "name": "s_modifier",
+              "value": 0
+            }
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "s_modifier",
+            "type": "variable_if",
+            "value": 1
+          },
+          {
+            "name": "d_modifier",
+            "type": "variable_if",
+            "value": 0
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$",
+              "^net\\.java\\.openjdk\\.cmd$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "s",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_command"
+            ]
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "command",
+              "shift"
+            ]
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "s_modifier",
+            "type": "variable_unless",
+            "value": 1
+          },
+          {
+            "name": "d_modifier",
+            "type": "variable_unless",
+            "value": 1
+          },
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$"
+            ],
+            "type": "frontmost_application_unless"
+          }
+        ],
+        "from": {
+          "key_code": "s",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "s_modifier",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "to": [
+          {
+            "set_variable": {
+              "name": "s_modifier",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_shift",
+              "left_command"
+            ],
+            "repeat": false
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "conditions": [
+          {
+            "name": "a_key_pressed",
+            "type": "variable_if",
+            "value": 1
+          }
+        ],
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          },
+          {
+            "set_variable": {
+              "name": "a_key_pressed",
+              "value": 0
+            }
+          }
+        ],
+        "parameters": {
+          "basic.to_if_held_down_threshold_milliseconds": 450
+        },
+        "to_if_held_down": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "left_command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "right_command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          }
+        ],
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "conditions": [
+          {
+            "bundle_identifiers": [
+              "^com\\.microsoft\\.VSCode$",
+              "^net\\.java\\.openjdk\\.cmd$"
+            ],
+            "type": "frontmost_application_if"
+          }
+        ],
+        "to": [
+          {
+            "set_variable": {
+              "name": "a_key_pressed",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "a",
+            "modifiers": [
+              "option",
+              "shift"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "shift"
+            ],
+            "repeat": false
+          }
+        ],
+        "to_if_held_down": [
+          {
+            "key_code": "a",
+            "modifiers": [
+              "option",
+              "shift"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "shift"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "shift"
+            ]
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "a_key_pressed",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "a_key_pressed",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "type": "basic"
+      },
+      {
+        "from": {
+          "key_code": "a",
+          "modifiers": {
+            "mandatory": [
+              "caps_lock"
+            ]
+          }
+        },
+        "to": [
+          {
+            "set_variable": {
+              "name": "a_key_pressed",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_shift",
+              "left_command"
+            ],
+            "repeat": false
+          }
+        ],
+        "parameters": {
+          "basic.to_if_held_down_threshold_milliseconds": 450
+        },
+        "to_if_held_down": [
+          {
+            "set_variable": {
+              "name": "a_key_pressed",
+              "value": 1
+            }
+          },
+          {
+            "key_code": "left_arrow",
+            "modifiers": [
+              "left_command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "right_arrow",
+            "modifiers": [
+              "left_shift",
+              "left_command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "c",
+            "modifiers": [
+              "command"
+            ],
+            "repeat": false
+          },
+          {
+            "key_code": "f14",
+            "modifiers": [
+              "shift"
+            ],
+            "repeat": false
+          }
+        ],
+        "to_delayed_action": {
+          "to_if_canceled": [
+            {
+              "set_variable": {
+                "name": "a_key_pressed",
+                "value": 0
+              }
+            }
+          ],
+          "to_if_invoked": [
+            {
+              "set_variable": {
+                "name": "a_key_pressed",
+                "value": 0
+              }
+            }
+          ]
+        },
+        "type": "basic"
+      }
+    ]
+  }
+  ]
+}

@@ -534,24 +534,7 @@
               "repeat": false
             }
           ],
-          "to_delayed_action": {
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "d_modifier",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "d_modifier",
-                  "value": 0
-                }
-              }
-            ]
-          },
+
           "type": "basic"
         },
         {
