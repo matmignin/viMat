@@ -2,28 +2,11 @@
 {
   "title": "A viMat3",
   "rules": [
-    {"description": "rcommandViM",
+{"description": "rcommandViM",
     "manipulators": [
 
 
 
-
-      {
-        "from": {"key_code": "left_control"
-        },
-        "to": [
-          {
-            "key_code": "left_control"
-          }
-        ],
-        "to_if_alone": [
-          {"key_code": "f14","modifiers":["shift"]},
-          {
-            "key_code": "return_or_enter"
-          }
-        ],
-        "type": "basic"
-      },
       {
         "from": {"key_code": "left_option"
         },
@@ -142,7 +125,7 @@
         },
         "to": [
           {
-            "key_code": "keypad_slash"
+            "key_code": "keypad_0"
           }
         ],
         "type": "basic"
@@ -225,10 +208,10 @@
         },
         "to": [
           {
-            "key_code": "open_bracket",
+          "key_code": "open_bracket",
             "modifiers": [
               "shift",
-              "command"
+              "right_command"
             ]
           }
         ],
@@ -872,7 +855,7 @@
         "to": [
           {
             "mouse_key": {
-              "vertical_wheel": -200
+              "vertical_wheel": -100
             }
           }
         ],
@@ -1146,8 +1129,43 @@
         "type": "basic"
       },
 
-      {
-        "conditions": [
+
+
+
+
+
+
+
+
+  {
+            "from": {"simultaneous": [
+            { "key_code": "period" },  {"key_code": "x"}
+            ],
+            "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+              "to": [
+                  {
+                      "repeat": false,
+                      "key_code": "right_arrow",
+                      "modifiers": [
+                        "control",
+                        "shift"
+                      ]
+                  },
+                  {
+                      "repeat": false,
+                      "key_code": "delete_or_backspace"
+                  },
+                  {"key_code": "f14"}
+              ],
+                "conditions": [
           {
             "bundle_identifiers": [
               "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
@@ -1157,29 +1175,37 @@
             "type": "frontmost_application_if"
           }
         ],
-        "from": {"key_code": "period",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
+          "type": "basic"
         },
-        "to": [
-          {
-            "key_code": "right_arrow",
-            "modifiers": [
-              "left_control"
+        {
+            "from": {"simultaneous": [
+            { "key_code": "comma" },  {"key_code": "x"}
             ],
-            "repeat": true
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
+            "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+              "to": [
+                  {
+                      "repeat": false,
+                      "key_code": "left_arrow",
+                      "modifiers": [
+                        "control",
+                        "shift"
+                      ]
+                  },
+                  {
+                      "repeat": false,
+                      "key_code": "delete_or_backspace"
+                  },
+                  {"key_code": "f14"}
+              ],
+                "conditions": [
           {
             "bundle_identifiers": [
               "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
@@ -1189,61 +1215,218 @@
             "type": "frontmost_application_if"
           }
         ],
-        "from": {"key_code": "period",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
+          "type": "basic"
         },
-        "to": [
 
-          {
-            "key_code": "right_arrow",
-            "modifiers": [
-              "left_control"
-            ],
-            "repeat": true
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-              "^com\\.microsoft\\.rdc\\.macos$",
-              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-            ],
-            "type": "frontmost_application_unless"
-          }
-        ],
-        "from": {"key_code": "period",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
 
-            {
-                "key_code": "right_arrow",
-                "modifiers": [
-                    "left_option"
+
+
+
+
+                  {
+                            "from": {"simultaneous": [
+                            { "key_code": "period" },  {"key_code": "x"}
+                            ],
+                            "modifiers": {
+                                    "mandatory": [
+                                      "fn"
+                                    ]
+                                  }
+                          },
+                          "parameters": {
+                            "basic.simultaneous_threshold_milliseconds": 100
+                          },
+                              "to": [
+                                  {
+                                      "repeat": false,
+                                      "key_code": "right_arrow",
+                                      "modifiers": [
+                                        "option",
+                                        "shift"
+                                      ]
+                                  },
+                                  {
+                                      "repeat": false,
+                                      "key_code": "delete_or_backspace"
+                                  },
+                                  {"key_code": "f14"}
+                              ],
+                          "type": "basic"
+                        },
+                        {
+                            "from": {"simultaneous": [
+                            { "key_code": "slash" },  {"key_code": "x"}
+                            ],
+                            "modifiers": {
+                                    "mandatory": [
+                                      "fn"
+                                    ]
+                                  }
+                          },
+                          "parameters": {
+                            "basic.simultaneous_threshold_milliseconds": 100
+                          },
+                              "to": [
+                                  {
+                                      "repeat": false,
+                                      "key_code": "right_arrow",
+                                      "modifiers": [
+                                        "command",
+                                        "shift"
+                                      ]
+                                  },
+                                  {
+                                  "key_code": "delete_or_backspace",
+                                  "modifiers": [
+                                    "left_control",
+                                    "left_shift"
+                                  ]
+                        },{"key_code": "f14"}
+                              ],
+                          "type": "basic"
+                        },
+                        {
+                            "from": {"simultaneous": [
+                            { "key_code": "comma" },  {"key_code": "x"}
+                            ],
+                            "modifiers": {
+                                    "mandatory": [
+                                      "fn"
+                                    ]
+                                  }
+                          },
+                          "parameters": {
+                            "basic.simultaneous_threshold_milliseconds": 100
+                          },
+                              "to": [
+                                  {
+                                      "repeat": false,
+                                      "key_code": "left_arrow",
+                                      "modifiers": [
+                                        "option",
+                                        "shift"
+                                      ]
+                                  },
+                                  {
+                                      "repeat": false,
+                                      "key_code": "delete_or_backspace"
+                                  },
+                                  {"key_code": "f14"}
+                              ],
+                          "type": "basic"
+                        },
+                        {
+                            "from": {"simultaneous": [
+                            { "key_code": "m" },{"key_code": "x"}
+                            ],
+                            "modifiers": {
+                                    "mandatory": [
+                                      "fn"
+                                    ]
+                                  }
+                          },
+                          "parameters": {
+                            "basic.simultaneous_threshold_milliseconds": 100
+                          },
+                              "to": [
+                                  {
+                                      "repeat": false,
+                                      "key_code": "left_arrow",
+                                      "modifiers": [
+                                        "command",
+                                        "shift"
+                                      ]
+                                  },
+                                  {
+                          "key_code": "delete_or_backspace",
+                          "modifiers": [
+                            "left_control",
+                            "left_shift"
+                            ]
+                            },{"key_code": "f14"}
+                              ],
+                          "type": "basic"
+                        },
+          {
+              "from": {"simultaneous": [
+                      {"key_code": "n"},  {"key_code": "x"}
+                          ],
+                          "modifiers": {
+                            "mandatory": [
+                              "fn"
+                            ]
+                          }
+                      },
+                      "parameters": {
+                          "basic.simultneous_threshold_milliseconds": 100
+                      },
+                      "to": [
+                        {
+                          "key_code": "right_arrow"
+                        },
+                        {
+                          "key_code": "left_arrow",
+                          "modifiers": [
+                            "left_option"
+                          ]
+                        },
+                        {
+                          "key_code": "right_arrow",
+                          "modifiers": [
+                            "left_option",
+                            "left_shift"
+                          ]
+                        },
+                        {
+                          "key_code": "delete_or_backspace",
+                          "modifiers": [
+                            "left_control",
+                            "left_shift"
+                          ]
+                        },{"key_code": "f14"}
+                      ],
+                  "type": "basic"
+                },
+{
+              "from": {"simultaneous": [
+              {"key_code": "semicolon"},  {"key_code": "x"}
+
                   ],
-              "repeat": true
-            }
-          ],
-        "type": "basic"
-      },
+                  "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+              },
+              "parameters": {
+                  "basic.simultneous_threshold_milliseconds": 100
+              },
+              "to": [
+                {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": [
+                    "left_option",
+                    "left_shift",
+                    "left_command"
+                  ]
+                }
+              ],
+          "type": "basic"
+        },
+
+
+
+
+
+
+
+
+
+
+
+
+
+
       {
         "from": {"key_code": "comma",
           "modifiers": {
@@ -1345,13 +1528,20 @@
             "key_code": "right_arrow",
             "modifiers": [
               "left_option",
-              "shift"
+              "right_shift"
             ],
             "repeat": true
           }
         ],
         "type": "basic"
       },
+
+
+
+
+
+
+
       {
         "from": {"key_code": "p",
           "modifiers": {
@@ -1375,795 +1565,7 @@
           }
         ],
         "type": "basic"
-      },
-
-
-      {
-        "from": {"key_code": "y",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "conditions": [
-          {
-            "name": "right_command-y",
-            "type": "variable_if",
-            "value": 1
-          }
-        ],
-        "to_delayed_action": {
-          "to_if_canceled": [
-            {
-              "set_variable": {
-                "name": "right_command-y",
-                "value": 0
-              }
-            }
-          ],
-          "to_if_invoked": [
-            {
-              "set_variable": {
-                "name": "right_command-y",
-                "value": 0
-              }
-            }
-          ]
-        },
-        "to": [
-          {
-            "set_variable": {
-              "name": "right_command-y",
-              "value": 1
-            }
-          },
-          {
-            "key_code": "a",
-            "modifiers": [
-              "left_command"
-            ]
-          },
-          {
-            "key_code": "x",
-            "modifiers": [
-              "command",
-              "option",
-              "left_shift"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "y",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "conditions": [
-          {
-            "name": "right_command-y",
-            "type": "variable_if",
-            "value": 0
-          }
-        ],
-        "parameters": {
-          "basic.to_if_alone_timeout_milliseconds": 250,
-          "basic.to_if_held_down_threshold_milliseconds": 250
-        },
-        "to_delayed_action": {
-          "to_if_canceled": [
-            {
-              "set_variable": {
-                "name": "right_command-y",
-                "value": 0
-              }
-            }
-          ],
-          "to_if_invoked": [
-            {
-              "set_variable": {
-                "name": "right_command-y",
-                "value": 0
-              }
-            }
-          ]
-        },
-        "to_if_alone": [
-          {
-            "set_variable": {
-              "name": "right_command-y",
-              "value": 1
-            }
-          },
-          {
-            "key_code": "a",
-            "modifiers": [
-              "left_command"
-            ]
-          }
-        ],
-        "to_if_held_down": [
-          {
-            "set_variable": {
-              "name": "right_command-y",
-              "value": 1
-            }
-          },
-          {
-            "key_code": "a",
-            "modifiers": [
-              "left_command"
-            ]
-          },
-          {
-            "key_code": "c",
-            "modifiers": [
-              "command"
-            ]
-          },{"key_code": "f14","modifiers":["left_shift"]}
-        ],
-        "type": "basic"
-      },
-
-
-      {
-        "from": {"key_code": "v",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "parameters": {
-          "basic.to_if_alone_timeout_milliseconds": 250,
-          "basic.to_if_held_down_threshold_milliseconds": 250
-        },
-        "to_if_alone": [
-          {
-            "key_code": "b",
-            "modifiers": [
-              "shift",
-              "option"
-            ]
-          }
-        ],
-        "to_if_held_down": [
-          {
-            "key_code": "b",
-            "modifiers": [
-              "command",
-              "shift"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "name": "right_command-c",
-            "type": "variable_if",
-            "value": 1
-          },
-          {
-            "bundle_identifiers": [
-              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-              "^com\\.microsoft\\.rdc\\.macos$",
-              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-            ],
-            "type": "frontmost_application_unless"
-          }
-        ],
-        "from": {"key_code": "c",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "parameters": {
-          "basic.to_if_alone_timeout_milliseconds": 250,
-          "basic.to_if_held_down_threshold_milliseconds": 250
-        },
-        "to_if_alone": [
-          {
-            "set_variable": {
-              "name": "right_command-c",
-              "value": 0
-            }
-          },
-          {
-            "key_code": "left_arrow",
-            "modifiers": [
-              "control"
-            ]
-          },
-          {
-            "key_code": "right_arrow",
-            "modifiers": [
-              "left_shift",
-              "control"
-            ]
-          },
-          {
-            "key_code": "c",
-            "modifiers": [
-              "command"
-            ]
-          },
-          {
-            "key_code": "f14",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "to_if_held_down": [
-          {
-            "set_variable": {
-              "name": "right_command-c",
-              "value": 1
-            }
-          },
-          {
-            "key_code": "left_arrow",
-            "modifiers": [
-              "left_command"
-            ]
-          },
-          {
-            "key_code": "right_arrow",
-            "modifiers": [
-              "left_shift",
-              "left_command"
-            ]
-          },
-          {
-            "key_code": "c",
-            "modifiers": [
-              "command"
-            ]
-          },
-          {
-            "key_code": "f14",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "name": "right_command-c",
-            "type": "variable_if",
-            "value": 1
-          },
-          {
-            "bundle_identifiers": [
-              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-              "^com\\.microsoft\\.rdc\\.macos$",
-              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-            ],
-            "type": "frontmost_application_if"
-          }
-        ],
-        "from": {"key_code": "c",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "parameters": {
-          "basic.to_if_alone_timeout_milliseconds": 250,
-          "basic.to_if_held_down_threshold_milliseconds": 250
-        },
-        "to_if_alone": [
-          {
-            "set_variable": {
-              "name": "right_command-c",
-              "value": 0
-            }
-          },
-          {
-            "key_code": "home"
-          },
-          {
-            "key_code": "end",
-            "modifiers": [
-              "left_shift"
-            ]
-          },
-          {
-            "key_code": "c",
-            "modifiers": [
-              "command"
-            ]
-          },
-          {
-            "key_code": "f14",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "to_if_held_down": [
-          {
-            "set_variable": {
-              "name": "right_command-c",
-              "value": 1
-            }
-          },
-          {
-            "key_code": "home"
-          },
-          {
-            "key_code": "end",
-            "modifiers": [
-              "left_shift"
-            ]
-          },
-          {
-            "key_code": "x",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "c",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "conditions": [
-          {
-            "name": "right_command-c",
-            "type": "variable_unless",
-            "value": 1
-          }
-        ],
-        "parameters": {
-          "basic.to_if_alone_timeout_milliseconds": 250,
-          "basic.to_if_held_down_threshold_milliseconds": 250
-        },
-        "to_delayed_action": {
-          "to_if_canceled": [
-            {
-              "set_variable": {
-                "name": "right_command-c",
-                "value": 0
-              }
-            }
-          ],
-          "to_if_invoked": [
-            {
-              "set_variable": {
-                "name": "right_command-c",
-                "value": 1
-              }
-            }
-          ]
-        },
-        "to_if_alone": [
-          {
-            "key_code": "c",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "to_if_held_down": [
-          {
-            "key_code": "x",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-              "^com\\.microsoft\\.rdc\\.macos$",
-              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-            ],
-            "type": "frontmost_application_if"
-          }
-        ],
-        "from": {"key_code": "m",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "home"
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "m",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "left_arrow",
-            "modifiers": [
-              "left_command"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-              "^com\\.microsoft\\.rdc\\.macos$",
-              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-            ],
-            "type": "frontmost_application_if"
-          }
-        ],
-        "from": {"key_code": "slash",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "end"
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-              "^com\\.microsoft\\.rdc\\.macos$",
-              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-            ],
-            "type": "frontmost_application_unless"
-          }
-        ],
-        "from": {"key_code": "slash",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "right_arrow",
-            "modifiers": [
-              "left_command"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-              "^com\\.microsoft\\.rdc\\.macos$",
-              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-            ],
-            "type": "frontmost_application_if"
-          },
-          {
-            "name": "d_modifier",
-            "type": "variable_if",
-            "value": 0
-          }
-        ],
-        "from": {"key_code": "m",
-          "modifiers": {
-            "mandatory": [
-              "right_command",
-              "right_shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "home",
-            "modifiers": [
-              "shift"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-              "^com\\.microsoft\\.rdc\\.macos$",
-              "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-            ],
-            "type": "frontmost_application_if"
-          }
-        ],
-        "from": {"key_code": "slash",
-          "modifiers": {
-            "mandatory": [
-              "right_command",
-              "right_shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "end",
-            "modifiers": [
-              "shift"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "m",
-          "modifiers": {
-            "mandatory": [
-              "right_command",
-              "right_shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "left_arrow",
-            "modifiers": [
-              "command",
-              "shift"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "conditions": [
-          {
-            "bundle_identifiers": [
-              "^notion\\.id$",
-              "^com\\.parallels\\.desktop\\.console$"
-            ],
-            "type": "frontmost_application_unless"
-          }
-        ],
-        "from": {"key_code": "slash",
-          "modifiers": {
-            "mandatory": [
-              "right_command",
-              "right_shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "right_arrow",
-            "modifiers": [
-              "command",
-              "shift"
-            ]
-          },
-          {
-            "key_code": "f15"
-          }
-        ],
-        "type": "basic"
-      },
-
-
-      {
-        "from": {"key_code": "u",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "page_up"
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "n",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "page_down"
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "u",
-          "modifiers": {
-            "mandatory": [
-              "right_shift",
-              "right_command"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "page_up",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "n",
-          "modifiers": {
-            "mandatory": [
-              "right_shift",
-              "right_command"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "page_down",
-            "modifiers": [
-              "command"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "h",
-          "modifiers": {
-            "mandatory": [
-              "right_command",
-              "right_shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "page_up",
-            "modifiers": [
-              "left_shift"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "l",
-          "modifiers": {
-            "mandatory": [
-              "right_command",
-              "right_shift"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "page_down",
-            "modifiers": [
-              "left_shift"
-            ]
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "close_bracket",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "f7"
-          }
-        ],
-        "type": "basic"
-      },
-      {
-        "from": {"key_code": "open_bracket",
-          "modifiers": {
-            "mandatory": [
-              "right_command"
-            ],
-            "optional": [
-              "caps_lock"
-            ]
-          }
-        },
-        "to": [
-          {
-            "key_code": "f6"
-          }
-        ],
-        "type": "basic"
-      }
+        }
     ]
   },
 
@@ -2221,9 +1623,12 @@
           },
           "to_if_alone": [
             {
-              "key_code": "return_or_enter"
-            },
-            {"key_code": "f14","modifiers":["left_control"]}
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "right_control",
+                "left_shift"
+              ]
+            }
           ],
           "type": "basic"
         },
@@ -2610,7 +2015,11 @@
           },
           "to": [
             {
-              "key_code": "delete_forward"
+              "key_code": "backslash",
+              "modifiers": [
+                "right_command",
+                "left_shift"
+              ]
             }
           ],
           "type": "basic"
@@ -2772,8 +2181,8 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
+            "basic.to_if_alone_timeout_milliseconds": 100,
+            "basic.to_if_held_down_threshold_milliseconds": 100
           },
           "to_delayed_action": {
             "to_if_canceled": [
@@ -3077,12 +2486,14 @@
 
       ]
     },
-{"description": "D Deletes",
+{"description": "lshift Deletes",
       "manipulators": [
 
+
+
         {
               "from": {"simultaneous": [
-                      {"key_code": "d"},{"key_code": "s"}
+              {"key_code": "z"},  {"key_code": "x"}
                   ],
                   "modifiers": {
                     "mandatory": [
@@ -3091,93 +2502,32 @@
                   }
               },
               "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
+                  "basic.simultneous_threshold_milliseconds": 100
               },
               "to": [
-                  {
-                      "repeat": false,
-                      "key_code": "delete_or_backspace",
-                      "modifiers": [
-                        "command",
-                        "shift"
-                      ]
-                  },
-                  {"key_code": "f14","modifiers":["left_shift"]}
+                {
+                  "key_code": "delete_or_backspace",
+                  "modifiers": [
+                    "left_option",
+                    "left_shift",
+                    "left_command"
+                  ]
+                },{"key_code": "f14","modifiers":["left_command"]}
               ],
           "type": "basic"
         },
         {
-              "from": {"simultaneous": [
-                      {"key_code": "d"},{"key_code": "w"}
-                  ],
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
-                    ]
-                  }
-              },
-              "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-              },
-              "to": [
-                  {
-                      "repeat": false,
-                      "key_code": "delete_or_backspace",
-                      "modifiers": [
-                        "option",
-                        "shift"
-                      ]
-                  }
-
+          "from": {"key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "fn"
               ],
-          "type": "basic"
-        },
-
-        {
-              "from": {"simultaneous": [
-                {"key_code": "d"},{"key_code": "e"}
-
-                  ],
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
-                    ]
-                  }
-              },
-              "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 800
-              },
-              "to": [
-                  {
-                      "repeat": false,
-                      "key_code": "delete_or_backspace",
-                      "modifiers": [
-                        "command",
-                        "shift"
-                      ]
-                  },
-                  {"key_code": "f14"}
-              ],
-          "type": "basic"
-        },
-        {
-              "from": {"simultaneous": [
-                      {
-                          "key_code": "d"
-                      },
-                      {
-                          "key_code": "period"
-                      }
-                  ],
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
-                    ]
-                  }
-              },
-              "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-              },
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
               "to": [
                   {
                       "repeat": false,
@@ -3196,23 +2546,17 @@
           "type": "basic"
         },
         {
-              "from": {"simultaneous": [
-                      {
-                          "key_code": "d"
-                      },
-                      {
-                          "key_code": "slash"
-                      }
-                  ],
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
-                    ]
-                  }
-              },
-              "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-              },
+          "from": {"key_code": "slash",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
               "to": [
                   {
                       "repeat": false,
@@ -3231,23 +2575,17 @@
           "type": "basic"
         },
         {
-              "from": {"simultaneous": [
-                      {
-                          "key_code": "d"
-                      },
-                      {
-                          "key_code": "comma"
-                      }
-                  ],
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
-                    ]
-                  }
-              },
-              "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-              },
+          "from": {"key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
               "to": [
                   {
                       "repeat": false,
@@ -3266,23 +2604,17 @@
           "type": "basic"
         },
         {
-              "from": {"simultaneous": [
-                      {
-                          "key_code": "d"
-                      },
-                      {
-                          "key_code": "m"
-                      }
-                  ],
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
-                    ]
-                  }
-              },
-              "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-              },
+          "from": {"key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
               "to": [
                   {
                       "repeat": false,
@@ -3301,23 +2633,133 @@
           "type": "basic"
         },
         {
-              "from": {"simultaneous": [
-                      {
-                          "key_code": "d"
-                      },
-                      {
-                          "key_code": "c"
-                      }
-                  ],
-                  "modifiers": {
-                    "mandatory": [
-                      "fn"
-                    ]
-                  }
-              },
-              "parameters": {
-                  "basic.simultaneous_threshold_milliseconds": 500
-              },
+          "from": {"key_code": "period",
+            "modifiers": {
+              "mandatory": [
+                "right_option",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+              "to": [
+                  {
+                      "repeat": false,
+                      "key_code": "right_arrow",
+                      "modifiers": [
+                        "option",
+                        "shift"
+                      ]
+                  },
+                  {
+                      "repeat": false,
+                      "key_code": "delete_or_backspace"
+                  },
+                  {"key_code": "f14"}
+              ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "slash",
+            "modifiers": {
+              "mandatory": [
+                "right_option",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+              "to": [
+                  {
+                      "repeat": false,
+                      "key_code": "right_arrow",
+                      "modifiers": [
+                        "command",
+                        "shift"
+                      ]
+                  },
+                  {
+                      "repeat": false,
+                      "key_code": "delete_or_backspace"
+                  },
+                  {"key_code": "f14"}
+              ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "comma",
+            "modifiers": {
+              "mandatory": [
+                "right_option",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+              "to": [
+                  {
+                      "repeat": false,
+                      "key_code": "left_arrow",
+                      "modifiers": [
+                        "option",
+                        "shift"
+                      ]
+                  },
+                  {
+                      "repeat": false,
+                      "key_code": "delete_or_backspace"
+                  },
+                  {"key_code": "f14"}
+              ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "m",
+            "modifiers": {
+              "mandatory": [
+                "right_option",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+              "to": [
+                  {
+                      "repeat": false,
+                      "key_code": "left_arrow",
+                      "modifiers": [
+                        "command",
+                        "shift"
+                      ]
+                  },
+                  {
+                      "repeat": false,
+                      "key_code": "delete_or_backspace"
+                  },
+                  {"key_code": "f14"}
+              ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "c",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
               "to": [
                 {
                   "key_code": "left_arrow",
@@ -3345,21 +2787,18 @@
         },
 
         {
-          "from": {"simultaneous": [
-            {"key_code": "d"},{"key_code": "f"}
-
+          "from": {"key_code": "g",
+            "modifiers": {
+              "mandatory": [
+                "left_shift",
+                "fn"
               ],
-              "modifiers": {
-                "mandatory": [
-                  "fn"
-                ]
-              }
-          },
-          "parameters": {
-              "basic.simultaneous_threshold_milliseconds": 400
+              "optional": [
+                "caps_lock"
+              ]
+            }
           },
           "to": [
-
             {
               "key_code": "right_arrow"
             },
@@ -3367,8 +2806,8 @@
                   "repeat": false,
                   "key_code": "delete_or_backspace",
                   "modifiers": [
-                    "option",
-                    "shift"
+                    "left_option",
+                    "right_shift"
                   ]
               }
 
@@ -3376,7 +2815,236 @@
           ],
 
       "type": "basic"
+    }
+
+
+
+      ]
     },
+
+
+
+
+
+{"description": "leftside ViM",
+      "manipulators": [
+
+
+        {
+          "from": {"simultaneous": [
+            { "key_code": "s" },{"key_code": "x"}
+            ],
+            "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+          "to": [
+            {
+              "key_code": "x",
+              "modifiers": [
+                "left_option","right_shift","right_control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+      {
+          "from": {"simultaneous": [
+              {"key_code": "q"},{ "key_code": "right_option" }
+            ],
+            "modifiers": {
+                    "mandatory":[
+                      "fn"
+                    ]
+                  }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_option",
+                "left_shift",
+                "left_command"
+              ]
+            },{"key_code": "f14","modifiers":["left_command"]}
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"simultaneous": [
+                {"key_code": "q"},{ "key_code": "w" }
+            ],
+            "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_option","left_shift","right_control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"simultaneous": [
+                {"key_code": "q"},{ "key_code": "tab" }
+            ],
+            "modifiers": {
+                    "optional": [
+                      "right_option"
+                    ]
+                  }
+        },
+      "conditions": [
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 1
+            }
+          ],
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+          "to": [
+            {
+              "key_code": "tab",
+              "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+        {
+          "from": {"simultaneous": [
+              {"key_code": "e"},{ "key_code": "w" }
+            ],
+            "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+          "to": [
+            {
+              "key_code": "delete_forward",
+              "modifiers": [
+                "left_option","left_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"simultaneous": [
+              {"key_code": "d"},{ "key_code": "s" }
+            ],
+            "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_option",
+                "left_shift",
+                "left_command"
+              ]
+            },{"key_code": "f14","modifiers":["left_command"]}
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"simultaneous": [
+              {"key_code": "a"},{ "key_code": "s" }
+            ],
+            "modifiers": {
+                    "mandatory": [
+                      "fn"
+                    ]
+                  }
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+          "to": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "left_option",
+                "left_shift",
+                "left_control"
+              ]
+            },{"key_code": "f14"}
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "f",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "key_code": "right_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "s",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "key_code": "left_arrow"
+            }
+          ],
+          "type": "basic"
+        },
+
         {
           "from": {"key_code": "d",
             "modifiers": {
@@ -3388,81 +3056,7 @@
               ]
             }
           },
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
-          },
-          "to_if_alone": [
-            {
-              "key_code": "delete_or_backspace"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "delete_or_backspace",
-              "modifiers": [
-                "left_command"
-              ],
-              "repeat": false
-            },            {"key_code": "f14","modifiers":["left_shift"]}
-          ],
-          "type": "basic"
-        }
 
-      ]
-    },
-{"description": "left_optionViM",
-      "manipulators": [
-
-
-        {
-          "from": {"key_code": "d",
-            "modifiers": {
-              "mandatory": [
-                "left_option"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "left_option"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow"
-            }
-          ],
-          "type": "basic"
-        },
-
-        {
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "left_option"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
           "to": [
             {
               "key_code": "down_arrow"
@@ -3471,16 +3065,17 @@
           "type": "basic"
         },
         {
-          "from": {"key_code": "w",
+          "from": {"key_code": "e",
             "modifiers": {
               "mandatory": [
-                "left_option"
+                "fn"
               ],
               "optional": [
                 "caps_lock"
               ]
             }
           },
+
           "to": [
             {
               "key_code": "up_arrow"
@@ -3492,17 +3087,18 @@
 
 
         {
-          "from": {"key_code": "d",
+          "from": {"key_code": "f",
             "modifiers": {
               "mandatory": [
-                "left_option",
-                "left_shift"
+                "left_command",
+                "fn"
               ],
               "optional": [
                 "caps_lock"
               ]
             }
           },
+
           "to": [
             {
               "key_code": "right_arrow",
@@ -3513,84 +3109,44 @@
           ],
           "type": "basic"
         },
-        {
-          "from": {"key_code": "d",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "left_shift"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
+
         {
           "from": {"key_code": "s",
             "modifiers": {
               "mandatory": [
-                "left_option",
-                "left_shift"
+                "left_command",
+                "fn"
               ],
               "optional": [
                 "caps_lock"
               ]
             }
           },
+
+          "to": [
+            {
+              "key_code": "left_arrow",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+        {
+          "from": {"key_code": "d",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
           "to": [
             {
               "key_code": "down_arrow",
@@ -3602,95 +3158,31 @@
           "type": "basic"
         },
         {
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "down_arrow",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "w",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "left_shift"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "up_arrow",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "w",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "left_shift"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "up_arrow",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "w",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "up_arrow",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
           "from": {"key_code": "e",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "left_command"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "key_code": "up_arrow",
+              "modifiers": [
+                "shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+        {
+          "from": {"key_code": "f",
             "modifiers": {
               "mandatory": [
                 "left_option"
@@ -3700,6 +3192,7 @@
               ]
             }
           },
+
           "to": [
             {
               "key_code": "right_arrow",
@@ -3710,20 +3203,168 @@
           ],
           "type": "basic"
         },
+
+
         {
-          "from": {"key_code": "q",
+          "from": {"key_code": "w",
             "modifiers": {
               "mandatory": [
-                "left_option"
+                "fn"
               ],
               "optional": [
                 "caps_lock"
               ]
             }
           },
+
           "to": [
             {
-              "key_code": "left_arrow",
+              "repeat": true,
+              "key_code": "delete_or_backspace",
+                "modifiers": [
+                "left_shift"
+              ]
+
+            }
+          ],
+            "type": "basic"
+        },
+        {
+          "from": {"key_code": "q",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "repeat": true,
+              "key_code": "delete_or_backspace",
+                "modifiers": [
+                "left_shift"
+              ]
+            }
+          ],
+            "type": "basic"
+        },
+        {
+          "from": {"key_code": "w",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "left_command"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_shift",
+                "left_command"
+              ]
+            }
+          ],
+            "type": "basic"
+        },
+        {
+          "from": {"key_code": "q",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "left_command"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "repeat": false,
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+              "left_shift",
+                "left_command"
+              ]
+            }
+          ],
+            "type": "basic"
+        },
+
+        {
+          "from": {"key_code": "z",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+        "type": "basic"
+        },
+        {
+          "from": {"key_code": "z",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_shift",
+                "left_option"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "x",
+            "modifiers": {
+              "mandatory": [
+                "left_command",
+                "fn"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "key_code": "delete_forward",
               "modifiers": [
                 "left_command"
               ]
@@ -3732,56 +3373,9 @@
           "type": "basic"
         },
         {
-          "from": {"key_code": "e",
+          "from": {"key_code": "r",
             "modifiers": {
               "mandatory": [
-                "left_option",
-                "left_shift"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "q",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
-                "left_shift"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "e",
-            "modifiers": {
-              "mandatory": [
-                "left_option",
                 "fn"
               ],
               "optional": [
@@ -3789,22 +3383,20 @@
               ]
             }
           },
+
           "to": [
             {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_command",
-                "left_shift"
-              ]
+              "key_code": "delete_forward"
+
             }
           ],
           "type": "basic"
         },
         {
-          "from": {"key_code": "q",
+          "from": {"key_code": "r",
             "modifiers": {
               "mandatory": [
-                "left_option",
+                "left_command",
                 "fn"
               ],
               "optional": [
@@ -3812,12 +3404,12 @@
               ]
             }
           },
+
           "to": [
             {
-              "key_code": "left_arrow",
+              "key_code": "delete_forward",
               "modifiers": [
-                "left_command",
-                "left_shift"
+                "left_command"
               ]
             }
           ],
@@ -3833,8 +3425,57 @@
       "manipulators": [
 
 
+
+        {
+          "type": "basic",
+          "from": {"key_code": "fn",
+            "modifiers": {
+              "mandatory": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option",
+              "modifiers": ["left_control"]
+            }
+          ],
+          "to_after_key_up": [
+            {
+              "key_code": "f14",
+              "modifiers": ["left_control"]
+            }
+          ]
+        },
+
+
         {
           "from": {"key_code": "left_option",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ]
+            }
+          },
+          "to_if_alone": [
+            {
+              "key_code": "f14",
+              "modifiers": [
+                "shift"
+              ]
+            },
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "left_control",
             "modifiers": {
               "mandatory": [
                 "fn"
@@ -3887,11 +3528,11 @@
           ],
           "to_if_alone": [
             {
-              "key_code": "escape"
+              "key_code": "f13"
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 500
+            "basic.to_if_alone_timeout_milliseconds": 100
           },
           "type": "basic"
         },
@@ -4156,7 +3797,7 @@
           },
           "to": [
             {
-              "key_code": "keypad_slash"
+              "key_code": "keypad_0"
             }
           ],
           "type": "basic"
@@ -4170,6 +3811,9 @@
             }
           },
           "to": [
+            {
+              "key_code": "equal_sign"
+            },
             {
               "key_code": "hyphen"
             }
@@ -4191,6 +3835,212 @@
           ],
           "type": "basic"
         },
+
+
+
+        {
+          "conditions": [
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 0
+            },
+            {
+              "name": "d_modifier",
+              "type": "variable_if",
+              "value": 0
+            }
+          ],
+          "from": {"key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "to_if_alone": [
+                        {
+              "key_code": "f14",
+              "modifiers": [
+                "right_option",
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+
+        {
+          "conditions": [
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 0
+            },
+            {
+              "name": "d_modifier",
+              "type": "variable_if",
+              "value": 0
+            }
+          ],
+          "from": {"key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "fn","left_command"
+              ],
+              "optional": [
+                "right_option"
+              ]
+            }
+
+
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "f14",
+              "modifiers": [
+                "option"
+              ]
+            },
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "right_shift"
+              ]
+            }
+          ],
+          "to_if_held_down": [
+            {
+              "key_code": "f14",
+              "modifiers": [
+                "option"
+              ]
+            },
+            {
+              "key_code": "return_or_enter",
+              "modifiers": [
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+
+  {
+          "from": {"key_code": "spacebar",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "left_command"
+              ],
+              "optional": [
+                "caps_lock"
+              ]
+            }
+          },
+
+          "to": [
+            {
+              "key_code": "f",
+              "modifiers": [
+                "left_command",
+                "left_control",
+                "left_shift"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
+
+
+
+        {
+          "conditions": [
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 0
+            }
+          ],
+          "from": {"key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "fn"
+              ],
+              "optional": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option"
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_option",
+                "left_shift",
+                "left_command"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "conditions": [
+            {
+              "name": "tab_modifier",
+              "type": "variable_if",
+              "value": 0
+            }
+          ],
+          "from": {"key_code": "tab",
+            "modifiers": {
+              "mandatory": [
+                "fn","left_command"
+              ],
+              "optional": [
+                "right_option"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "right_option","modifiers":["left_command"]
+            }
+          ],
+          "to_if_alone": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "left_command"
+              ]
+            },
+            {
+              "key_code": "delete_or_backspace"
+            }
+          ],
+          "type": "basic"
+        },
         {
           "conditions": [
             {
@@ -4200,8 +4050,7 @@
             },
             {
               "bundle_identifiers": [
-                "^com\\.microsoft\\.teams2$",
-                "^com\\.microsoft\\.Excel"
+                "^com\\.microsoft\\.teams2$"
               ],
               "type": "frontmost_application_unless"
             }
@@ -4234,8 +4083,7 @@
             },
             {
               "bundle_identifiers": [
-                "^com\\.microsoft\\.teams2$",
-                "^com\\.microsoft\\.Excel$"
+                "^com\\.microsoft\\.teams2$"
               ],
               "type": "frontmost_application_unless"
             }
@@ -4273,15 +4121,14 @@
             },
             {
               "bundle_identifiers": [
-                "^com\\.microsoft\\.teams2$",
-                "^com\\.microsoft\\.Excel$"
+                "^com\\.microsoft\\.teams2$"
               ],
               "type": "frontmost_application_if"
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds":  100,
-            "basic.to_if_held_down_threshold_milliseconds": 100
+            "basic.to_if_alone_timeout_milliseconds":  150,
+            "basic.to_if_held_down_threshold_milliseconds": 200
           },
           "from": {"key_code": "tab",
             "modifiers": {
@@ -4306,8 +4153,7 @@
             },
             {
               "bundle_identifiers": [
-                "^com\\.microsoft\\.teams2$",
-                "^com\\.microsoft\\.Excel$"
+                "^com\\.microsoft\\.teams2$"
               ],
               "type": "frontmost_application_if"
             }
@@ -4330,51 +4176,23 @@
           ],
           "type": "basic"
         },
+        {
+          "from": {"simultaneous": [
+              {"key_code": "open_bracket"},{ "key_code": "close_bracket" }
+          ]
+          },
+          "parameters": {
+            "basic.simultaneous_threshold_milliseconds": 100
+          },
+          "to": [
+            {
+              "key_code": "open_bracket","repeat": false},{"key_code": "spacebar","repeat": false},{"key_code": "close_bracket","repeat": false},{"key_code": "spacebar","repeat": false}
+          ],
+          "type": "basic"
+        },
+        {
 
-        {
-          "from": {"simultaneous": [
-              {"key_code": "q"},{ "key_code": "u" }
-            ]
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 150
-          },
-          "to": [
-            {
-              "key_code": "q","repeat": false},{"key_code": "u","repeat": false}
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"simultaneous": [
-              {
-                "key_code": "q"},{"key_code": "spacebar"}
-            ]
-          },
-          "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 150
-          },
-          "to": [
-            {
-              "key_code": "q",
-              "repeat": false
-            },
-            {
-              "key_code": "spacebar",
-              "repeat": false
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "tab_modifier",
-              "type": "variable_if",
-              "value": 0
-            }
-          ],
-          "from": {"key_code": "q"
+        "from": {"key_code": "q"
           },
           "to": [
             {
@@ -4385,7 +4203,7 @@
             }
           ],
           "to_after_key_up": [
-            {
+          {
               "set_variable": {
                 "name": "tab_modifier",
                 "value": 0
@@ -4398,8 +4216,7 @@
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 200
+              "basic.to_if_alone_timeout_milliseconds": 150
           },
           "type": "basic"
         },
@@ -4414,12 +4231,9 @@
           "from": {"key_code": "q",
             "modifiers": {
               "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "left_command"
+                "fn", "right_option"
               ]
-            }
+                }
           },
           "to": [
             {
@@ -4438,17 +4252,22 @@
             }
           ],
           "to_if_alone": [
+            {"key_code": "f14","modifiers":["shift"]},
             {
-              "key_code": "q"
+              "key_code": "delete_or_backspace",
+              "modifiers": [
+                "left_command"
+              ]
             }
           ],
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
+            "basic.to_if_alone_timeout_milliseconds": 150,
             "basic.to_if_held_down_threshold_milliseconds": 200
           },
           "type": "basic"
         },
-        {
+
+          {
           "conditions": [
             {
               "name": "tab_modifier",
@@ -4459,7 +4278,6 @@
           "from": {"key_code": "right_option",
             "modifiers": {
               "optional": [
-                "fn",
                 "left_command"
               ]
             }
@@ -4479,7 +4297,6 @@
             {
               "bundle_identifiers": [
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.microsoft\\.Excel$",
                 "^net\\.java\\.openjdk\\.cmd$"
               ],
               "type": "frontmost_application_unless"
@@ -4491,8 +4308,6 @@
                 "right_option"
               ],
               "optional": [
-                "caps_lock",
-                "fn",
                 "left_command"
               ]
             }
@@ -4509,7 +4324,6 @@
             {
               "bundle_identifiers": [
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.microsoft\\.Excel$",
                 "^net\\.java\\.openjdk\\.cmd$"
               ],
               "type": "frontmost_application_if"
@@ -4521,9 +4335,7 @@
                 "right_option"
               ],
               "optional": [
-                "caps_lock",
-                "fn",
-                "left_command"
+                "right_command"
               ]
             }
           },
@@ -4531,7 +4343,7 @@
             {
               "key_code": "close_bracket",
               "modifiers": [
-                "command"
+                "right_command"
               ]
             }
           ],
@@ -4542,7 +4354,6 @@
             {
               "bundle_identifiers": [
                 "^com\\.microsoft\\.VSCode$",
-                "^com\\.microsoft\\.Excel$",
                 "^net\\.java\\.openjdk\\.cmd$"
               ],
               "type": "frontmost_application_if"
@@ -4556,7 +4367,6 @@
           "from": {"key_code": "right_option",
             "modifiers": {
               "optional": [
-                "fn",
                 "left_command"
               ]
           }
@@ -4565,7 +4375,7 @@
             {
               "key_code": "close_bracket",
               "modifiers": [
-                "command"
+                "right_command"
               ]
             }
           ],
@@ -4575,7 +4385,7 @@
           "from": {"key_code": "k",
             "modifiers": {
               "mandatory": [
-                "right_alt",
+                "right_option",
                 "left_command"
               ],
               "optional": [
@@ -4594,7 +4404,7 @@
           "from": {"key_code": "j",
             "modifiers": {
               "mandatory": [
-                "right_alt",
+                "right_option",
                 "left_command"
               ],
               "optional": [
@@ -4622,7 +4432,7 @@
               "key_code": "open_bracket",
               "modifiers": [
                 "shift",
-                "command"
+                "right_command"
               ]
             }
           ],
@@ -4648,7 +4458,7 @@
                 "shift",
                 "option"
               ]
-            }
+        }
           ],
           "type": "basic"
         },
@@ -5060,6 +4870,14 @@
 
 
         {
+          "conditions": [
+              {
+              "bundle_identifiers": [
+                "^com\\.microsoft\\.VSCode$"
+              ],
+              "type": "frontmost_application_if"
+            }
+          ],
           "from": {"key_code": "spacebar",
             "modifiers": {
               "mandatory": [
@@ -5072,57 +4890,17 @@
           },
           "to": [
             {
-              "key_code": "f14"
-            },
-            {
-              "key_code": "return_or_enter"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "spacebar",
-            "modifiers": {
-              "mandatory": [
-                "fn",
-                "right_option"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f14",
+              "key_code": "f",
               "modifiers": [
-                "option"
-              ]
-            },
-            {
-              "key_code": "return_or_enter",
-              "modifiers": [
-                "left_command"
-              ]
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "f14",
-              "modifiers": [
-                "option"
-              ]
-            },
-            {
-              "key_code": "return_or_enter",
-              "modifiers": [
-                "left_command",
+                "left_control",
                 "left_shift"
               ]
             }
           ],
           "type": "basic"
         },
+
+
 
 
         {
@@ -5219,7 +4997,11 @@
                 "caps_lock"
               ]
             }
+
+
           },
+
+
           "to": [
             {
               "key_code": "return_or_enter",
@@ -5230,83 +5012,8 @@
           ],
           "type": "basic"
         },
-        {
-          "from": {"key_code": "return_or_enter"
-          },
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 550
-          },
-          "to_if_alone": [
-            {
-              "key_code": "return_or_enter"
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "return_or_enter",
-              "modifiers": [
-                "right_command"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "w",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow"
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_option"
-              ]
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_option",
-                "shift"
-              ]
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_arrow"
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_option"
-                              ]
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_option",
-                "shift"
-              ]
-            },
-            {
-              "key_code": "x",
-              "modifiers": [
-                "command"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
+
+
         {
           "from": {"key_code": "semicolon",
             "modifiers": {
@@ -5326,6 +5033,26 @@
             },
             {
               "key_code": "f15"
+            }
+          ],
+          "type": "basic"
+        },
+        {
+          "from": {"key_code": "i",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "left_command"
+              ]
+            }
+          },
+          "to": [
+            {
+              "key_code": "i",
+              "modifiers": [
+                "left_command",
+                "shift"
+              ]
             }
           ],
           "type": "basic"
@@ -5382,10 +5109,11 @@
               "value": 0
             }
           ],
-          "from": {"key_code": "r",
+          "from": {"key_code": "a",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "fn",
+                "left_command"
               ],
               "optional": [
                 "caps_lock"
@@ -5394,16 +5122,38 @@
           },
           "to": [
             {
-              "key_code": "r",
+              "key_code": "s",
               "modifiers": [
-                "left_command",
-                "left_alt",
+                "left_shift",
+                "left_option",
                 "left_control"
               ]
             }
           ],
           "type": "basic"
         },
+{
+          "from": {"key_code": "a",
+            "modifiers": {
+              "mandatory": [
+                "fn",
+                "left_command"
+              ]
+            }
+          },
+        "to": [
+            {
+              "key_code": "a",
+              "modifiers": [
+                "left_option",
+                "left_shift",
+                "left_control"
+              ]
+            }
+          ],
+          "type": "basic"
+        },
+
         {
           "from": {"key_code": "escape",
             "modifiers": {
@@ -5508,7 +5258,7 @@
               "type": "frontmost_application_if"
             }
           ],
-          "from": {"key_code": "f",
+          "from": {"key_code": "g",
             "modifiers": {
               "mandatory": [
                 "fn"
@@ -5538,7 +5288,7 @@
               "type": "frontmost_application_if"
             }
           ],
-          "from": {"key_code": "f",
+          "from": {"key_code": "g",
             "modifiers": {
               "mandatory": [
                 "fn",
@@ -5886,7 +5636,7 @@
           "type": "basic"
         },
         {
-          "from": {"key_code": "g",
+          "from": {"key_code": "y",
             "modifiers": {
               "mandatory": [
                 "fn"
@@ -6117,24 +5867,7 @@
           ],
           "type": "basic"
         },
-        {
-          "from": {"key_code": "z",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f7"
-            }
-          ],
-          "type": "basic"
-        },
+
         {
           "from": {"key_code": "x",
             "modifiers": {
@@ -6148,6 +5881,7 @@
           },
           "to": [
             {
+              "repeat": true,
               "key_code": "delete_forward"
             }
           ],
@@ -6183,7 +5917,7 @@
 
             {
               "repeat": false,
-              "key_code": "forward_delete",
+              "key_code": "delete_forward",
               "modifiers": [
                 "left_command"
               ]
@@ -6458,7 +6192,7 @@
             }
           },
           "to": [
-
+          {"key_code": "f14","modifiers":["left_option"]},
             {
               "key_code": "left_arrow",
               "modifiers": [
@@ -6490,6 +6224,7 @@
           },
           "to": [
 
+            {"key_code": "f14","modifiers":["left_option"]},
             {
               "key_code": "left_arrow",
               "modifiers": [
@@ -6522,6 +6257,7 @@
             }
           },
           "to": [
+            {"key_code": "f14","modifiers":["left_option"]},
             {
               "key_code": "right_arrow",
               "modifiers": [
@@ -6554,7 +6290,7 @@
             }
           },
           "to": [
-
+          {"key_code": "f14","modifiers":["left_option"]},
             {
               "key_code": "right_arrow",
               "modifiers": [
@@ -6587,7 +6323,7 @@
             }
           },
           "to": [
-
+          {"key_code": "f14","modifiers":["left_option"]},
               {
                   "key_code": "right_arrow",
                   "modifiers": [
@@ -6616,7 +6352,7 @@
                 "shift"
               ],
               "repeat": true
-            }
+            },{"key_code": "f14","modifiers":["left_shift"]}
           ],
           "conditions": [
             {
@@ -6670,7 +6406,7 @@
                 "shift"
               ],
               "repeat": true
-            }
+            },{"key_code": "f14","modifiers":["left_shift"]}
           ],
           "conditions": [
             {
@@ -6702,7 +6438,7 @@
                 "shift"
               ],
               "repeat": true
-            }
+            },{"key_code": "f14","modifiers":["left_shift"]}
           ],
           "type": "basic"
         },
@@ -6719,11 +6455,10 @@
           },
           "to": [
             {
-              "key_code": "v",
+              "key_code": "p",
               "modifiers": [
-                "command",
-                "control",
                 "shift",
+                "control",
                 "option"
               ]
             }
@@ -6731,10 +6466,11 @@
           "type": "basic"
         },
         {
-          "from": {"key_code": "q",
+          "from": {"key_code": "p",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "fn",
+                "left_command"
               ],
               "optional": [
                 "caps_lock"
@@ -6743,154 +6479,20 @@
           },
           "to": [
             {
-              "key_code": "escape"
+              "key_code": "p",
+              "modifiers": [
+                "command",
+                "shift",
+                "control",
+                "option"
+              ]
             }
           ],
           "type": "basic"
         },
 
-        {
-          "from": {"key_code": "y",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "conditions": [
-            {
-              "name": "fn-y",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "fn-y",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "fn-y",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "fn-y",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "key_code": "x",
-              "modifiers": [
-                "command",
-                "option",
-                "left_shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "y",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "conditions": [
-            {
-              "name": "fn-y",
-              "type": "variable_if",
-              "value": 0
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
-          },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "fn-y",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "fn-y",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "to_if_alone": [
-            {
-              "set_variable": {
-                "name": "fn-y",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "key_code": "c",
-              "modifiers": [
-                "left_command"
-              ]
-            },{"key_code": "f14","modifiers":["shift"]}
-          ],
-          "to_if_held_down": [
-            {
-              "set_variable": {
-                "name": "fn-y",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "key_code": "x",
-              "modifiers": [
-                "command"
-              ]
-            },{"key_code": "f14","modifiers":["left_option"]}
-          ],
-          "type": "basic"
-        },
+
+
 
         {
           "from": {"key_code": "t",
@@ -6904,8 +6506,8 @@
             }
           },
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
+            "basic.to_if_alone_timeout_milliseconds": 100,
+            "basic.to_if_held_down_threshold_milliseconds": 100
           },
           "to_if_alone": [
             {
@@ -6931,7 +6533,7 @@
           "from": {"key_code": "e",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "left_command"
               ],
               "optional": [
                 "caps_lock"
@@ -6939,15 +6541,15 @@
             }
           },
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
+            "basic.to_if_alone_timeout_milliseconds": 100,
+            "basic.to_if_held_down_threshold_milliseconds": 100
           },
           "to": [
             {
               "key_code": "e",
               "modifiers": [
                 "left_command",
-                "left_option"
+                "left_shift"
               ]
             },
             {
@@ -6958,50 +6560,7 @@
 
           "type": "basic"
         },
-        {
-          "from": {"key_code": "e",
-            "modifiers": {
-              "mandatory": [
-                "fn","left_command"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
-          },
-          "to": [
-            {
-              "key_code": "e",
-              "modifiers": [
-                "left_control",
-                "left_option"
-              ]
-            }
 
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "e",
-              "modifiers": [
-                "left_control",
-                "left_option"
-              ]
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_shift"
-              ]
-            }
-
-          ],
-
-          "type": "basic"
-        },
         {
           "from": {"key_code": "v",
             "modifiers": {
@@ -7014,12 +6573,12 @@
             }
           },
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
+            "basic.to_if_alone_timeout_milliseconds": 100,
+            "basic.to_if_held_down_threshold_milliseconds": 100
           },
           "to_if_alone": [
             {
-              "key_code": "b",
+              "key_code": "v",
               "modifiers": [
                 "shift",
                 "option"
@@ -7028,7 +6587,7 @@
           ],
           "to_if_held_down": [
             {
-              "key_code": "b",
+              "key_code": "v",
               "modifiers": [
                 "command",
                 "shift"
@@ -7038,21 +6597,6 @@
           "type": "basic"
         },
         {
-          "conditions": [
-            {
-              "name": "fn-c",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "bundle_identifiers": [
-                "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-                "^com\\.microsoft\\.rdc\\.macos$",
-                "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-              ],
-              "type": "frontmost_application_unless"
-            }
-          ],
           "from": {"key_code": "c",
             "modifiers": {
               "mandatory": [
@@ -7064,97 +6608,34 @@
             }
           },
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
+            "basic.to_if_alone_timeout_milliseconds": 100,
+            "basic.to_if_held_down_threshold_milliseconds": 100
           },
           "to_if_alone": [
             {
-              "set_variable": {
-                "name": "fn-c",
-                "value": 0
-              }
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "control"
-              ]
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_shift",
-                "control"
-              ]
-            },
-            {
               "key_code": "c",
               "modifiers": [
-                "command"
-              ]
-            },
-            {
-              "key_code": "f14",
-              "modifiers": [
-                "command"
+                "shift",
+                "option"
               ]
             }
           ],
           "to_if_held_down": [
             {
-              "set_variable": {
-                "name": "fn-c",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_shift",
-                "left_command"
-              ]
-            },
-            {
               "key_code": "c",
               "modifiers": [
-                "command"
-              ]
-            },
-            {
-              "key_code": "f14",
-              "modifiers": [
-                "command"
+                "command",
+                "shift"
               ]
             }
           ],
           "type": "basic"
         },
         {
-          "conditions": [
-            {
-              "name": "fn-c",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "bundle_identifiers": [
-                "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-                "^com\\.microsoft\\.rdc\\.macos$",
-                "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {"key_code": "c",
+          "from": {"key_code": "a",
             "modifiers": {
               "mandatory": [
-                "fn"
+                "left_command"
               ],
               "optional": [
                 "caps_lock"
@@ -7162,125 +6643,31 @@
             }
           },
           "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
+            "basic.to_if_alone_timeout_milliseconds": 400,
+            "basic.to_if_held_down_threshold_milliseconds": 400
           },
-          "to_if_alone": [
+          "to": [
             {
-              "set_variable": {
-                "name": "fn-c",
-                "value": 0
-              }
-            },
-            {
-              "key_code": "home"
-            },
-            {
-              "key_code": "end",
+              "key_code": "a",
               "modifiers": [
-                "left_shift"
-              ]
-            },
-            {
-              "key_code": "c",
-              "modifiers": [
-                "command"
-              ]
-            },
-            {
-              "key_code": "f14",
-              "modifiers": [
-                "command"
+                "left_command"
               ]
             }
           ],
           "to_if_held_down": [
             {
-              "set_variable": {
-                "name": "fn-c",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "home"
-            },
-            {
-              "key_code": "end",
-              "modifiers": [
-                "left_shift"
-              ]
-            },
-            {
-              "key_code": "x",
-              "modifiers": [
-                "command",
-                "option",
-                "left_shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "c",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "conditions": [
-            {
-              "name": "fn-c",
-              "type": "variable_unless",
-              "value": 1
-            }
-          ],
-          "parameters": {
-            "basic.to_if_alone_timeout_milliseconds": 250,
-            "basic.to_if_held_down_threshold_milliseconds": 250
-          },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "fn-c",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "fn-c",
-                  "value": 1
-                }
-              }
-            ]
-          },
-          "to_if_alone": [
-            {
               "key_code": "c",
               "modifiers": [
-                "command"
-              ]
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "x",
-              "modifiers": [
-                "command",
-                "option",
-                "left_shift"
+                "left_command",
+                "right_shift",
+                "left_control"
               ]
             }
           ],
           "type": "basic"
         },
+
+
         {
           "conditions": [
             {
@@ -7305,7 +6692,7 @@
           "to": [
             {
               "key_code": "home"
-            }
+            }, {"key_code": "f14","modifiers":["left_option"]}
           ],
           "type": "basic"
         },
@@ -7326,7 +6713,7 @@
               "modifiers": [
                 "left_command"
               ]
-            }
+            }, {"key_code": "f14","modifiers":["left_option"]}
           ],
           "type": "basic"
         },
@@ -7354,7 +6741,8 @@
           "to": [
             {
               "key_code": "end"
-            }
+            },
+            {"key_code": "f14","modifiers":["left_option"]}
           ],
           "type": "basic"
         },
@@ -7385,7 +6773,8 @@
               "modifiers": [
                 "left_command"
               ]
-            }
+            },
+            {"key_code": "f14","modifiers":["left_option"]}
           ],
           "type": "basic"
         },
@@ -7419,7 +6808,7 @@
               "modifiers": [
                 "shift"
               ]
-            }
+            }, {"key_code": "f14","modifiers":["left_shift"]}
           ],
           "type": "basic"
         },
@@ -7448,7 +6837,7 @@
               "modifiers": [
                 "shift"
               ]
-            }
+            },{"key_code": "f14","modifiers":["left_shift"]}
           ],
           "type": "basic"
         },
@@ -7468,20 +6857,11 @@
                 "command",
                 "shift"
               ]
-            }
+            },{"key_code": "f14","modifiers":["left_shift"]}
           ],
           "type": "basic"
         },
         {
-          "conditions": [
-            {
-              "bundle_identifiers": [
-                "^notion\\.id$",
-                "^com\\.parallels\\.desktop\\.console$"
-              ],
-              "type": "frontmost_application_unless"
-            }
-          ],
           "from": {"key_code": "slash",
             "modifiers": {
               "mandatory": [
@@ -7497,10 +6877,8 @@
                 "command",
                 "shift"
               ]
-            },
-            {
-              "key_code": "f15"
-            }
+            },{"key_code": "f14","modifiers":["left_shift"]}
+
           ],
           "type": "basic"
         },
@@ -7553,7 +6931,7 @@
           "to": [
             {
               "mouse_key": {
-                "vertical_wheel": 40
+                "vertical_wheel": -40
               }
             }
           ],
@@ -7570,7 +6948,7 @@
           "to": [
             {
               "mouse_key": {
-                "vertical_wheel": -40
+                "vertical_wheel": 40
               }
             }
           ],
@@ -7610,40 +6988,8 @@
           ],
           "type": "basic"
         },
-        {
-          "from": {"key_code": "n",
-            "modifiers": {
-              "mandatory": [
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "mouse_key": {
-                "vertical_wheel": 80
-              }
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "u",
-            "modifiers": {
-              "mandatory": [
-                "right_option"
-              ]
-            }
-          },
-          "to": [
-            {
-              "mouse_key": {
-                "vertical_wheel": -80
-              }
-            }
-          ],
-          "type": "basic"
-        },
+
+
 
         {
           "from": {"key_code": "n",
@@ -7735,7 +7081,7 @@
           "to": [
             {
               "mouse_key": {
-                "vertical_wheel": -200
+                "vertical_wheel": 200
               }
             }
           ],
@@ -7752,7 +7098,7 @@
           "to": [
             {
               "mouse_key": {
-                "vertical_wheel": -50
+                "vertical_wheel": 50
               }
             }
           ],
@@ -7871,562 +7217,17 @@
           "type": "basic"
         },
 
-        {
-          "from": {"key_code": "open_bracket",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f6"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "close_bracket",
-            "modifiers": {
-              "mandatory": [
-                "left_command"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "f7"
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "a_key_pressed",
-              "type": "variable_unless",
-              "value": 1
-            },
-            {
-              "bundle_identifiers": [
-                "^notion\\.id$",
-               "^net\\.java\\.openjdk\\.cmd$",
-               "^com\\.microsoft\\.VSCode$"
-              ],
-              "type": "frontmost_application_unless"
-            }
-          ],
-          "from": {"key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
 
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_command"
-              ],
-              "repeat": false
-            }
-          ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "a_key_pressed",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "a_key_pressed",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "to_if_held_down": [
-            {
-              "key_code": "a",
-              "modifiers": [
-                "command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "c",
-              "modifiers": [
-                "right_command",
-                "right_control",
-                "right_shift"
-              ],
-              "repeat": false
-            },
-            {
-              "set_variable": {
-                "name": "a_key_pressed",
-                "value": 1
-              }
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "a",
+
+
+
+{
+  "from":{"key_code": "a",
             "modifiers": {
-              "mandatory": [
-                "fn",
-                "left_command"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "conditions": [
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$",
-                "^net\\.java\\.openjdk\\.cmd$"
-              ],
-              "type": "frontmost_application_if"
-            },
-            {
-              "name": "a_key_pressed",
-              "type": "variable_if",
-              "value": 0
-            }
-          ],
-          "to": [
-            {
-              "set_variable": {
-                "name": "a_key_pressed",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "a",
-              "modifiers": [
-                "shift",
-                "option",
-                "command"
-              ],
-              "repeat": false
-            }
-          ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "a_key_pressed",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "a_key_pressed",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "type": "basic"
-        },
-        {
-          "from": {"key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "fn",
-                "left_shift"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_shift",
+                "mandatory": [
                 "left_command",
-                "left_alt"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-
-        {
-          "conditions": [
-            {
-              "name": "s_modifier",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_alt"
-              ],
-              "repeat": false
-            }
-          ],
-          "to_delayed_action": {
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "s_modifier",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "name": "d_modifier",
-              "type": "variable_if",
-              "value": 0
-            },
-            {
-              "bundle_identifiers": [
-                "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-                "^com\\.microsoft\\.rdc\\.macos$",
-                "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "home"
-            },
-            {
-              "key_code": "end",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "x",
-              "modifiers": [
-                "command"              ]
-            },{"key_code": "f14","modifiers":["left_option"]}
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "s_modifier",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "name": "d_modifier",
-              "type": "variable_if",
-              "value": 0
-            },
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$",
-                "^net\\.java\\.openjdk\\.cmd$"
-              ],
-              "type": "frontmost_application_unless"
-            }
-          ],
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "shift",
-                "command"
-              ],
-              "repeat": false
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "shift",
-                "command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "x",
-              "modifiers": [
-                "command",
-                "option",
                 "left_shift"
               ],
-              "repeat": false
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$"
-              ],
-              "type": "frontmost_application_if"
-            },
-            {
-              "name": "d_modifier",
-              "type": "variable_if",
-              "value": 0
-            },
-            {
-              "name": "s_modifier",
-              "type": "variable_if",
-              "value": 0
-            }
-          ],
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "s_modifier",
-                "value": 1
-              }
-            }
-          ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "to_if_alone": [
-            {
-              "set_variable": {
-                "name": "s_modifier",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_option",
-                "left_command"
-              ]
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_command",
-                "left_shift",
-                "left_control"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "bundle_identifiers": [
-                "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
-                "^com\\.microsoft\\.rdc\\.macos$",
-                "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
-              ],
-              "type": "frontmost_application_if"
-            },
-            {
-              "name": "d_modifier",
-              "type": "variable_if",
-              "value": 0
-            },
-            {
-              "name": "s_modifier",
-              "type": "variable_if",
-              "value": 0
-            }
-          ],
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "s_modifier",
-                "value": 1
-              }
-            }
-          ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "to_if_alone": [
-            {
-              "set_variable": {
-                "name": "s_modifier",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "home"
-            },
-            {
-              "key_code": "end",
-              "modifiers": [
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "d_modifier",
-              "type": "variable_if",
-              "value": 0
-            },
-            {
-              "name": "s_modifier",
-              "type": "variable_if",
-              "value": 1
-            }
-          ],
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
               "optional": [
                 "caps_lock"
               ]
@@ -8435,417 +7236,70 @@
           "to": [
             {
               "key_code": "a",
-              "modifiers": [
-                "command"
-              ],
-              "repeat": false
-            },
-            {
-              "set_variable": {
-                "name": "s_modifier",
-                "value": 0
-              }
-            }
-          ],
-          "to_if_held_down": [
-            {
-              "key_code": "x",
-              "modifiers": [
-                "command",
-                "option",
-                "left_shift"
-              ],
-              "repeat": false
-            }
-          ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "type": "basic"
-        },
-
-        {
-          "conditions": [
-            {
-              "name": "s_modifier",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "name": "d_modifier",
-              "type": "variable_if",
-              "value": 0
-            },
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$",
-                "^net\\.java\\.openjdk\\.cmd$"
-              ],
-              "type": "frontmost_application_unless"
-            }
-          ],
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_command"
-              ]
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "command",
-                "shift"
-              ]
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "s_modifier",
-              "type": "variable_unless",
-              "value": 1
-            },
-            {
-              "name": "d_modifier",
-              "type": "variable_unless",
-              "value": 1
-            },
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$"
-              ],
-              "type": "frontmost_application_unless"
-            }
-          ],
-          "from": {"key_code": "s",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "s_modifier",
-                  "value": 0
-                }
-              }
-            ]
-          },
-          "to": [
-            {
-              "set_variable": {
-                "name": "s_modifier",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_shift",
-                "left_command"
-              ],
-              "repeat": false
-            }
-          ],
-          "type": "basic"
-        },
-        {
-          "conditions": [
-            {
-              "name": "a_key_pressed",
-              "type": "variable_if",
-              "value": 1
-            },
-            {
-              "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$",
-                "^net\\.java\\.openjdk\\.cmd$"
-              ],
-              "type": "frontmost_application_if"
-            }
-          ],
-          "from": {"key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
-          "to": [
-            {
-              "key_code": "a",
-              "modifiers": [
-                "command"
-              ],
-              "repeat": false
-            },
-            {
-              "set_variable": {
-                "name": "a_key_pressed",
-                "value": 0
-              }
-            }
-          ],
-          "parameters": {
-            "basic.to_if_held_down_threshold_milliseconds": 450
-          },
-          "to_if_held_down": [
-            {
-              "key_code": "a",
-              "modifiers": [
-                "left_command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "c",
               "modifiers": [
                 "right_command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "f14",
-              "modifiers": [
-                "command"
-              ],
-              "repeat": false
+              ]
             }
           ],
           "type": "basic"
         },
+
+
+
         {
-          "from": {"key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "fn"
-              ],
-              "optional": [
-                "caps_lock"
-              ]
-            }
-          },
           "conditions": [
             {
               "bundle_identifiers": [
-                "^com\\.microsoft\\.VSCode$",
-                "^net\\.java\\.openjdk\\.cmd$"
+                "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
               ],
               "type": "frontmost_application_if"
             }
           ],
+          "from": {"key_code": "f1"
+          },
           "to": [
             {
-              "set_variable": {
-                "name": "a_key_pressed",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "a",
+              "key_code": "f1",
               "modifiers": [
-                "right_option",
-                "right_shift"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "right_shift"
-              ],
-              "repeat": false
-            }
+                "left_shift"
+              ]
+          }
           ],
           "to_if_held_down": [
-            {
-              "key_code": "a",
-              "modifiers": [
-                "right_option",
-                "right_shift"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "shift"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "c",
-              "modifiers": [
-                "command"
-              ],
-              "repeat": false
-            },
-            {"key_code": "f14","modifiers":["left_shift"]}
+              {
+                  "key_code": "f1"
+              }
           ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "a_key_pressed",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "a_key_pressed",
-                  "value": 0
-                }
-              }
-            ]
-          },
           "type": "basic"
         },
         {
-          "from": {"key_code": "a",
-            "modifiers": {
-              "mandatory": [
-                "fn"
+          "conditions": [
+            {
+              "bundle_identifiers": [
+                "^com\\.citrix\\.receiver\\.icaviewer\\.mac$",
+                "^com\\.microsoft\\.rdc\\.macos$",
+                "^com\\.p5sys\\.jump\\.mac\\.viewer\\.web"
               ],
-              "optional": [
-                "caps_lock"
-              ]
+              "type": "frontmost_application_if"
             }
+          ],
+          "from": {"key_code": "f2"
           },
           "to": [
             {
-              "set_variable": {
-                "name": "a_key_pressed",
-                "value": 1
-              }
-            },
-            {
-              "key_code": "left_arrow",
+              "key_code": "f2",
               "modifiers": [
-                "left_command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_shift",
-                "left_command"
-              ],
-              "repeat": false
-            }
+                "left_shift"
+              ]
+          }
           ],
-          "parameters": {
-            "basic.to_if_held_down_threshold_milliseconds": 450
-          },
           "to_if_held_down": [
-            {
-              "set_variable": {
-                "name": "a_key_pressed",
-                "value": 1
+              {
+                  "key_code": "f2"
               }
-            },
-            {
-              "key_code": "left_arrow",
-              "modifiers": [
-                "left_command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "right_arrow",
-              "modifiers": [
-                "left_shift",
-                "left_command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "c",
-              "modifiers": [
-                "command"
-              ],
-              "repeat": false
-            },
-            {
-              "key_code": "f14",
-              "modifiers": [
-                "shift"
-              ],
-              "repeat": false
-            }
           ],
-          "to_delayed_action": {
-            "to_if_canceled": [
-              {
-                "set_variable": {
-                  "name": "a_key_pressed",
-                  "value": 0
-                }
-              }
-            ],
-            "to_if_invoked": [
-              {
-                "set_variable": {
-                  "name": "a_key_pressed",
-                  "value": 0
-                }
-              }
-            ]
-          },
           "type": "basic"
         },
         {
@@ -8867,6 +7321,7 @@
           ],
           "type": "basic"
         },
+
         {
           "from": {"key_code": "f2",
             "modifiers": {
@@ -8936,7 +7391,7 @@
             ]
           },
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 300
+            "basic.simultaneous_threshold_milliseconds": 100
           },
           "to": [
             {
@@ -8959,7 +7414,7 @@
             ]
           },
           "parameters": {
-            "basic.simultaneous_threshold_milliseconds": 300
+            "basic.simultaneous_threshold_milliseconds": 100
           },
           "to": [
             {
